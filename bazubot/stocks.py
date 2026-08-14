@@ -59,11 +59,15 @@ def user_stock_name(conn, owner_id: str) -> str | None:
     return row["name"] if row else None
 
 
-def create_user_stock(conn, owner_id: str, display_name: str) -> str:
-    """사업가 명의 주식을 발행한다. 이미 있으면 그대로 두고 이름만 돌려준다."""
+def create_user_stock(conn, owner_id: str, display_name: str) -> tuple[str, bool]:
+    """사업가 명의 주식을 발행한다.
+
+    한 사람당 한 종목이라, 사업가를 다시 해도 예전 종목을 그대로 쓰고 중복 상장하지
+    않는다. (종목명, 이번에 새로 상장했는지)를 돌려준다.
+    """
     existing = user_stock_name(conn, owner_id)
     if existing:
-        return existing
+        return existing, False
 
     base = display_name.strip()[:MAX_STOCK_NAME_LENGTH] or f"유저 {owner_id}"
     name = base
@@ -78,7 +82,7 @@ def create_user_stock(conn, owner_id: str, display_name: str) -> str:
         "VALUES (?, ?, ?, ?, ?)",
         (name, USER_STOCK_BASE_PRICE, USER_STOCK_BASE_PRICE, USER_STOCK_BASE_PRICE, owner_id),
     )
-    return name
+    return name, True
 
 
 def is_market_open(now: datetime | None = None) -> bool:
@@ -95,7 +99,7 @@ def get_stock(conn, name: str) -> sqlite3.Row | None:
 
 
 def tick_prices(conn) -> list[str]:
-    """가격을 한 번 변동시키고, 상장폐지된 종목 이름을 돌려줍니다."""
+    """가격을 한 번 변동시키고, 폭락해서 초기화된 종목 이름을 돌려줍니다."""
     crashed = []
     for row in conn.execute("SELECT name, price, base_price FROM stock").fetchall():
         new_price = row["price"] + random.randint(DELTA_MIN, DELTA_MAX)

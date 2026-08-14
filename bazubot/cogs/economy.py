@@ -174,9 +174,11 @@ class Economy(commands.Cog):
                 return
             economy.set_job(conn, user_id, 직업.value)
             issued_stock = None
+            newly_listed = False
             if 직업.value == "사업가":
                 # 사업가는 본인 명의 주식이 상장된다. (다른 종목과 기능은 동일)
-                issued_stock = stocks_module.create_user_stock(
+                # 사업가를 다시 해도 예전 종목을 그대로 쓴다.
+                issued_stock, newly_listed = stocks_module.create_user_stock(
                     conn, user_id, interaction.user.display_name
                 )
 
@@ -193,10 +195,15 @@ class Economy(commands.Cog):
                 f"**{직업.value}**(으)로 취직했어요!"
             )
         stock_note = ""
-        if issued_stock:
+        if issued_stock and newly_listed:
             stock_note = (
-                f"\n{stocks_module.USER_STOCK_EMOJI} **{issued_stock}** 주식이 상장돼 있어요! "
+                f"\n{stocks_module.USER_STOCK_EMOJI} **{issued_stock}** 주식이 상장됐어요! "
                 f"(기본가 {stocks_module.USER_STOCK_BASE_PRICE:,}달러)"
+            )
+        elif issued_stock:
+            stock_note = (
+                f"\n{stocks_module.USER_STOCK_EMOJI} **{issued_stock}** 주식은 예전에 상장한 "
+                "그대로예요. (중복 상장되지 않아요)"
             )
         await interaction.response.send_message(
             f"{headline} ({economy.JOB_DESCRIPTION[직업.value]})\n"
