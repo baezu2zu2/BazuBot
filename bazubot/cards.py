@@ -25,10 +25,10 @@ RARITY_WEIGHTS = {
     "legendary": 3,
 }
 RARITY_PRICE = {
-    "common": 20,
-    "uncommon": 50,
-    "rare": 150,
-    "legendary": 500,
+    "common": 60,
+    "uncommon": 150,
+    "rare": 450,
+    "legendary": 1500,
 }
 
 UNIQUE_CARD_NAMES = {"드래곤 알", "명령 블록", "반복형 명령 블록", "연쇄형 명령 블록"}
