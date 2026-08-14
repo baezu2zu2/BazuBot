@@ -211,6 +211,59 @@ class Collection(commands.Cog):
             )
         await interaction.response.send_message(embed=embed)
 
+    @app_commands.command(name="수집률랭킹", description="카드 수집률 랭킹을 확인합니다.")
+    async def collection_leaderboard(self, interaction: discord.Interaction):
+        user_id = str(interaction.user.id)
+        with get_db() as conn:
+            total = len(cards_module.get_all_cards(conn))
+            if total == 0:
+                await interaction.response.send_message("등록된 카드가 없어요.", ephemeral=True)
+                return
+
+            rows = conn.execute(
+                """
+                SELECT user_id, COUNT(DISTINCT card_id) AS owned
+                FROM inventory
+                WHERE quantity > 0
+                GROUP BY user_id
+                ORDER BY owned DESC
+                """
+            ).fetchall()
+
+        if not rows:
+            await interaction.response.send_message(
+                "아직 카드를 수집한 사람이 없어요.", ephemeral=True
+            )
+            return
+
+        medals = {0: "🥇", 1: "🥈", 2: "🥉"}
+        lines = []
+        for i, row in enumerate(rows[:10]):
+            member = interaction.guild.get_member(int(row["user_id"])) if interaction.guild else None
+            name = member.display_name if member else f"유저 {row['user_id']}"
+            percent = row["owned"] / total * 100
+            rank_label = medals.get(i, f"{i + 1}.")
+            lines.append(f"{rank_label} {name} — {row['owned']:,} / {total:,}장 ({percent:.1f}%)")
+
+        embed = discord.Embed(
+            title="🏆 카드 수집률 랭킹",
+            description="\n".join(lines),
+            color=discord.Color.gold(),
+        )
+
+        my_rank = next((i for i, row in enumerate(rows) if row["user_id"] == user_id), None)
+        if my_rank is not None and my_rank >= 10:
+            my_owned = rows[my_rank]["owned"]
+            my_percent = my_owned / total * 100
+            embed.set_footer(
+                text=(
+                    f"{interaction.user.display_name}님의 순위: {my_rank + 1}위 "
+                    f"({my_owned:,} / {total:,}장, {my_percent:.1f}%)"
+                )
+            )
+
+        await interaction.response.send_message(embed=embed)
+
     @app_commands.command(
         name="카드뽑기", description=f"{economy.GACHA_COST:,}달러로 카드를 뽑습니다."
     )
