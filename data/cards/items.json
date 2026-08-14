@@ -1,0 +1,8241 @@
+{
+  "source": "https://namu.wiki/w/마인크래프트/아이템/목록",
+  "rarities": [
+    "common",
+    "uncommon",
+    "rare",
+    "legendary"
+  ],
+  "cards": [
+    {
+      "name": "가문비나무",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "가문비나무 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "가문비나무 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "가문비나무 울타리",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "가문비나무 원목",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "가문비나무 판자",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "구리 격자",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "구리 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "구리 창살",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "금 간 네더 벽돌",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "금 간 석재 벽돌",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "금 간 심층암 벽돌",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "금 간 심층암 타일",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "금 간 윤나는 흑암 벽돌",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "금 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "깎인 구리",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "깎인 구리 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "깎인 구리 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "깎인 붉은 사암",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "깎인 붉은 사암 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "깎인 사암",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "깎인 사암 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "껍질 벗긴 가문비나무",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "껍질 벗긴 가문비나무 원목",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "껍질 벗긴 대나무 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "껍질 벗긴 뒤틀린 균사",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "껍질 벗긴 뒤틀린 자루",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "껍질 벗긴 맹그로브나무",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "껍질 벗긴 맹그로브나무 원목",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "껍질 벗긴 벚나무",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "껍질 벗긴 벚나무 원목",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "껍질 벗긴 아카시아나무",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "껍질 벗긴 아카시아나무 원목",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "껍질 벗긴 자작나무",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "껍질 벗긴 자작나무 원목",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "껍질 벗긴 정글나무",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "껍질 벗긴 정글나무 원목",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "껍질 벗긴 진홍빛 균사",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "껍질 벗긴 진홍빛 자루",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "껍질 벗긴 짙은 참나무",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "껍질 벗긴 짙은 참나무 원목",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "껍질 벗긴 참나무",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "껍질 벗긴 참나무 원목",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "껍질 벗긴 창백한 참나무",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "껍질 벗긴 창백한 참나무 원목",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "네더 벽돌 계단",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "네더 벽돌 담장",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "네더 벽돌 반 블록",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "네더 벽돌 울타리",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "네더 사마귀 블록",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "네더라이트 블록",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "녹슨 구리",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "녹슨 구리 격자",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "녹슨 구리 창살",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "녹슨 깎인 구리",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "녹슨 깎인 구리 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "녹슨 깎인 구리 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "녹슨 조각된 구리",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "다이아몬드 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "대나무 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "대나무 모자이크",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "대나무 모자이크 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "대나무 모자이크 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "대나무 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "대나무 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "대나무 울타리",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "대나무 판자",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "돌",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "돌 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "돌 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "뒤틀린 계단",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "뒤틀린 균사",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "뒤틀린 반 블록",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "뒤틀린 울타리",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "뒤틀린 자루",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "뒤틀린 판자",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "매끄러운 돌",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "매끄러운 돌 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "매끄러운 붉은 사암",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "매끄러운 붉은 사암 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "매끄러운 붉은 사암 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "매끄러운 사암",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "매끄러운 사암 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "매끄러운 사암 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "매끄러운 석영 계단",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "매끄러운 석영 반 블록",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "매끄러운 석영 블록",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "매끄러운 현무암",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "맹그로브나무",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "맹그로브나무 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "맹그로브나무 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "맹그로브나무 울타리",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "맹그로브나무 원목",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "맹그로브나무 판자",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 구리 격자",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 구리 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 구리 창살",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 깎인 구리",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 깎인 구리 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 깎인 구리 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 녹슨 구리",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 녹슨 구리 격자",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 녹슨 구리 창살",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 녹슨 깎인 구리",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 녹슨 깎인 구리 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 녹슨 깎인 구리 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 녹슨 조각된 구리",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 산화된 구리",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 산화된 구리 격자",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 산화된 구리 창살",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 산화된 깎인 구리",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 산화된 깎인 구리 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 산화된 깎인 구리 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 산화된 조각된 구리",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 약간 녹슨 구리",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 약간 녹슨 구리 격자",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 약간 녹슨 구리 창살",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 약간 녹슨 깎인 구리",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 약간 녹슨 깎인 구리 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 약간 녹슨 깎인 구리 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 약간 녹슨 조각된 구리",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 조각된 구리",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "벚나무",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "벚나무 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "벚나무 울타리",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "벚나무 원목",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "벚나무 잎",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "벚나무 판자",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "벽돌 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "벽돌 담장",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "벽돌 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "보강된 심층암",
+      "category": "건축 블록",
+      "rarity": "legendary"
+    },
+    {
+      "name": "붉은 네더 벽돌",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "붉은 네더 벽돌 계단",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "붉은 네더 벽돌 담장",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "붉은 네더 벽돌 반 블록",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "붉은 사암",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "붉은 사암 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "붉은 사암 담장",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "붉은 사암 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "사암",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "사암 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "사암 담장",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "사암 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "산화된 구리",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "산화된 구리 격자",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "산화된 구리 창살",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "산화된 깎인 구리",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "산화된 깎인 구리 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "산화된 깎인 구리 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "산화된 조각된 구리",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "석영 계단",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "석영 기둥",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "석영 반 블록",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "석영 벽돌",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "석영 블록",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "석재 벽돌",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "석재 벽돌 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "석재 벽돌 담장",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "석재 벽돌 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "석탄 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "섬록암",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "섬록암 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "섬록암 담장",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "섬록암 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "수지 벽돌 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "수지 벽돌 담장",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "수지 벽돌 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "심층암",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "심층암 벽돌",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "심층암 벽돌 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "심층암 벽돌 담장",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "심층암 벽돌 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "심층암 조약돌",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "심층암 조약돌 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "심층암 조약돌 담장",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "심층암 조약돌 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "심층암 타일",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "심층암 타일 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "심층암 타일 담장",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "아카시아나무",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "아카시아나무 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "아카시아나무 울타리",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "아카시아나무 원목",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "아카시아나무 잎",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "아카시아나무 판자",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "안산암",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "안산암 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "안산암 담장",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "안산암 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "약간 녹슨 구리",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "약간 녹슨 구리 격자",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "약간 녹슨 구리 창살",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "약간 녹슨 깎인 구리",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "약간 녹슨 깎인 구리 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "약간 녹슨 깎인 구리 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "약간 녹슨 조각된 구리",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "에메랄드 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "엔드 돌",
+      "category": "건축 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "엔드 석재 벽돌",
+      "category": "건축 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "엔드 석재 벽돌 계단",
+      "category": "건축 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "엔드 석재 벽돌 담장",
+      "category": "건축 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "엔드 석재 벽돌 반 블록",
+      "category": "건축 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "유황",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "유황 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "유황 담장",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "유황 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "유황 벽돌",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "유황 벽돌 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "유황 벽돌 담장",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "유황 벽돌 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 섬록암",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 섬록암 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 섬록암 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 심층암",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 심층암 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 심층암 담장",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 심층암 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 안산암",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 안산암 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 안산암 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 유황",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 유황 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 유황 담장",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 유황 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 응회암",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 응회암 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 응회암 담장",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 응회암 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 진사",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 진사 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 진사 담장",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 진사 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 현무암",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 화강암",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 화강암 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 화강암 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 흑암",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 흑암 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 흑암 담장",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 흑암 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 흑암 벽돌",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 흑암 벽돌 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 흑암 벽돌 담장",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 흑암 벽돌 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "응회암",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "응회암 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "응회암 담장",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "응회암 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "응회암 벽돌",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "응회암 벽돌 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "응회암 벽돌 담장",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "응회암 벽돌 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "이끼 낀 석재 벽돌",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "이끼 낀 석재 벽돌 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "이끼 낀 석재 벽돌 담장",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "이끼 낀 석재 벽돌 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "이끼 낀 조약돌",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "이끼 낀 조약돌 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "이끼 낀 조약돌 담장",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "이끼 낀 조약돌 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "자작나무",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "자작나무 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "자작나무 울타리",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "자작나무 원목",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "자작나무 잎",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "자작나무 판자",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "정글나무",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "정글나무 울타리",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "정글나무 원목",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "정글나무 잎",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "정글나무 판자",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "조각된 구리",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "조각된 네더 벽돌",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "조각된 붉은 사암",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "조각된 사암",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "조각된 석영 블록",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "조각된 석재 벽돌",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "조각된 수지 벽돌",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "조각된 심층암",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "조각된 유황",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "조각된 윤나는 흑암",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "조각된 응회암",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "조각된 응회암 벽돌",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "조각된 진사",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "조약돌",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "조약돌 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "조약돌 담장",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "조약돌 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "진사",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "진사 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "진사 담장",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "진사 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "진사 벽돌",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "진사 벽돌 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "진사 벽돌 담장",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "진사 벽돌 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "진홍빛 계단",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "진홍빛 균사",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "진홍빛 반 블록",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "진홍빛 울타리",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "진홍빛 자루",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "진홍빛 판자",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "진흙 벽돌",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "진흙 벽돌 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "진흙 벽돌 담장",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "진흙 벽돌 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "짙은 참나무",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "짙은 참나무 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "짙은 참나무 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "짙은 참나무 울타리",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "짙은 참나무 원목",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "짙은 참나무 잎",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "짙은 참나무 판자",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "짙은 프리즈머린",
+      "category": "건축 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "짙은 프리즈머린 계단",
+      "category": "건축 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "짙은 프리즈머린 반 블록",
+      "category": "건축 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "참나무",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "참나무 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "참나무 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "참나무 울타리",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "참나무 원목",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "참나무 판자",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "창백한 참나무",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "창백한 참나무 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "창백한 참나무 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "창백한 참나무 울타리",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "창백한 참나무 원목",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "창백한 참나무 판자",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "철 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "철 창살",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "청금석 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "퍼퍼 계단",
+      "category": "건축 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "퍼퍼 기둥",
+      "category": "건축 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "퍼퍼 반 블록",
+      "category": "건축 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "퍼퍼 블록",
+      "category": "건축 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "프리즈머린",
+      "category": "건축 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "프리즈머린 계단",
+      "category": "건축 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "프리즈머린 담장",
+      "category": "건축 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "프리즈머린 반 블록",
+      "category": "건축 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "프리즈머린 벽돌",
+      "category": "건축 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "프리즈머린 벽돌 계단",
+      "category": "건축 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "프리즈머린 벽돌 반 블록",
+      "category": "건축 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "현무암",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "화강암",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "화강암 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "화강암 담장",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "화강암 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "황금이 박힌 흑암",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "흑암",
+      "category": "건축 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "흑암 계단",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "흑암 담장",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "흑암 반 블록",
+      "category": "건축 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "가루눈 가마솥",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "가마솥",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "가문비나무 매다는 표지판",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "가문비나무 선반",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "가문비나무 표지판",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "갈색 셜커 상자",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "갈색 초",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "갈색 침대",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "갈색 현수막",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "갑옷 거치대",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "검은색 셜커 상자",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "검은색 초",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "검은색 침대",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "검은색 현수막",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "과녁",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "구리 골렘 동상",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "구리 랜턴",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "구리 사슬",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "구리 상자",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "구리 횃불",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "그림",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "금 간 모루",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "금고",
+      "category": "기능 블록",
+      "rarity": "legendary"
+    },
+    {
+      "name": "노란색 색유리",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "노란색 색유리 판",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "노란색 셜커 상자",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "노란색 양털",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "노란색 초",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "노란색 침대",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "노란색 테라코타",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "노란색 현수막",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "녹슨 구리 골렘 동상",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "녹슨 구리 랜턴",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "녹슨 구리 사슬",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "녹슨 구리 상자",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "대나무 매다는 표지판",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "대나무 선반",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "대나무 표지판",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "대장장이 작업대",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "독서대",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "뒤틀린 매다는 표지판",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "뒤틀린 선반",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "뒤틀린 표지판",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "드래곤 머리",
+      "category": "기능 블록",
+      "rarity": "legendary"
+    },
+    {
+      "name": "드래곤 알",
+      "category": "기능 블록",
+      "rarity": "legendary"
+    },
+    {
+      "name": "랜턴",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "리스폰 정박기",
+      "category": "기능 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "마법 부여대",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "맹그로브나무 매다는 표지판",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "맹그로브나무 선반",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "맹그로브나무 표지판",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "모닥불",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "모루",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "물 가마솥",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 구리 골렘 동상",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 구리 랜턴",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 구리 사슬",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 구리 상자",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 녹슨 구리 골렘 동상",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 녹슨 구리 랜턴",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 녹슨 구리 사슬",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 녹슨 구리 상자",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 산화된 구리 골렘 동상",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 산화된 구리 사슬",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 산화된 구리 상자",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 약간 녹슨 구리 골렘 동상",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 약간 녹슨 구리 랜턴",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 약간 녹슨 구리 사슬",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 약간 녹슨 구리 상자",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "바다 랜턴",
+      "category": "기능 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "발광 아이템 액자",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "벌레 먹은 금 간 석재 벽돌",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "벌레 먹은 돌",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "벌레 먹은 석재 벽돌",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "벌레 먹은 심층암",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "벌레 먹은 이끼 낀 석재 벽돌",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "벌레 먹은 조각된 석재 벽돌",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "벌레 먹은 조약돌",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "벌집",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "벌통",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "벚나무 매다는 표지판",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "벚나무 반 블록",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "벚나무 선반",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "벚나무 표지판",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "베틀",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "보라색 셜커 상자",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "보라색 초",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "보라색 침대",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "보라색 현수막",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "분홍색 셜커 상자",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "분홍색 초",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "분홍색 침대",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "분홍색 현수막",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "불길한 현수막",
+      "category": "기능 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "비계",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "빨간색 셜커 상자",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "빨간색 초",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "빨간색 침대",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "빨간색 현수막",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "사다리",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "산화된 구리 골렘 동상",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "산화된 구리 랜턴",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "산화된 구리 사슬",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "산화된 구리 상자",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "상자",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "석재 절단기",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "셜커 상자",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "소리 블록",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "손상된 모루",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "수상한 모래",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "수상한 자갈",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "숫돌",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "스켈레톤 해골",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "신호기",
+      "category": "기능 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "아이템 액자",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "아카시아나무 매다는 표지판",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "아카시아나무 반 블록",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "아카시아나무 선반",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "아카시아나무 표지판",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "약간 녹슨 구리 골렘 동상",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "약간 녹슨 구리 랜턴",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "약간 녹슨 구리 사슬",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "약간 녹슨 구리 상자",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "양조기",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "엔더 상자",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "엔드 막대기",
+      "category": "기능 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "엔드 수정",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "엔드 차원문 틀",
+      "category": "기능 블록",
+      "rarity": "legendary"
+    },
+    {
+      "name": "연두색 셜커 상자",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "연두색 초",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "연두색 침대",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "연두색 현수막",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "영혼 랜턴",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "영혼 모닥불",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "영혼 불",
+      "category": "기능 블록",
+      "rarity": "legendary"
+    },
+    {
+      "name": "영혼 횃불",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "용광로",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "용암 가마솥",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "위더 스켈레톤 해골",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "자석석",
+      "category": "기능 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "자작나무 매다는 표지판",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "자작나무 반 블록",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "자작나무 선반",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "자작나무 표지판",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "자홍색 셜커 상자",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "자홍색 초",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "자홍색 침대",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "자홍색 현수막",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "잔딧빛 개구리불",
+      "category": "기능 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "전달체",
+      "category": "기능 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "정글나무 매다는 표지판",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "정글나무 선반",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "정글나무 표지판",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "제작대",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "조각된 책장",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "좀비 머리",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "종",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "주크박스",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "주황색 셜커 상자",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "주황색 초",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "주황색 침대",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "주황색 현수막",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "진줏빛 개구리불",
+      "category": "기능 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "진홍빛 매다는 표지판",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "진홍빛 선반",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "진홍빛 표지판",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "짙은 참나무 매다는 표지판",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "짙은 참나무 선반",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "짙은 참나무 표지판",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "참나무 매다는 표지판",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "참나무 선반",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "참나무 표지판",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "창백한 참나무 매다는 표지판",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "창백한 참나무 선반",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "창백한 참나무 표지판",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "책장",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "철 사슬",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "청록색 셜커 상자",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "청록색 초",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "청록색 침대",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "청록색 현수막",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "초",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "초록색 셜커 상자",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "초록색 초",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "초록색 침대",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "초록색 현수막",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "크리퍼 머리",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "통",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "퇴비통",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "파란색 셜커 상자",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "파란색 초",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "파란색 침대",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "파란색 현수막",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "표지판",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "플레이어 머리",
+      "category": "기능 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "피글린 머리",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "하늘색 셜커 상자",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "하늘색 초",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "하늘색 침대",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "하늘색 현수막",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "하얀색 셜커 상자",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "하얀색 초",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "하얀색 침대",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "하얀색 현수막",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "화로",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "화분",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "화살 작업대",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "황톳빛 개구리불",
+      "category": "기능 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "횃불",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "회백색 셜커 상자",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "회백색 초",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "회백색 침대",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "회백색 현수막",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "회색 셜커 상자",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "회색 초",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "회색 침대",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "회색 현수막",
+      "category": "기능 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "훈연기",
+      "category": "기능 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "가루눈 양동이",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "가문비나무 보트",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "가위",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "갈색 꾸러미",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "갈색 하네스",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "검은색 꾸러미",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "검은색 하네스",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "겉날개",
+      "category": "도구 및 유용한 물건",
+      "rarity": "rare"
+    },
+    {
+      "name": "광산 수레",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "구리 곡괭이",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "구리 괭이",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "구리 도끼",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "구리 삽",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "글이 쓰인 책",
+      "category": "도구 및 유용한 물건",
+      "rarity": "rare"
+    },
+    {
+      "name": "금 곡괭이",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "금 괭이",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "금 도끼",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "금 삽",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "꾸러미",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "끈",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "나무 곡괭이",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "나무 괭이",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "나무 도끼",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "나무 삽",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "나침반",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "낚싯대",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "네더라이트 곡괭이",
+      "category": "도구 및 유용한 물건",
+      "rarity": "rare"
+    },
+    {
+      "name": "네더라이트 괭이",
+      "category": "도구 및 유용한 물건",
+      "rarity": "rare"
+    },
+    {
+      "name": "네더라이트 도끼",
+      "category": "도구 및 유용한 물건",
+      "rarity": "rare"
+    },
+    {
+      "name": "네더라이트 삽",
+      "category": "도구 및 유용한 물건",
+      "rarity": "rare"
+    },
+    {
+      "name": "노란색 꾸러미",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "노란색 하네스",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "다이아몬드 곡괭이",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "다이아몬드 괭이",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "다이아몬드 도끼",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "다이아몬드 삽",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "당근 낚싯대",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "대구가 담긴 양동이",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "대나무 뗏목",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "돌 곡괭이",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "돌 괭이",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "돌 도끼",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "돌 삽",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "뒤틀린 균 낚싯대",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "만회 나침반",
+      "category": "도구 및 유용한 물건",
+      "rarity": "rare"
+    },
+    {
+      "name": "망원경",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "맹그로브나무 보트",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "물 양동이",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "벚나무 보트",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "보라색 꾸러미",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "보라색 하네스",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "복어가 담긴 양동이",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "부싯돌과 부시",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "분홍색 꾸러미",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "분홍색 하네스",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "빈 지도",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "빨간색 꾸러미",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "빨간색 하네스",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "상자가 실린 가문비나무 보트",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "상자가 실린 대나무 뗏목",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "상자가 실린 맹그로브나무 보트",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "상자가 실린 벚나무 보트",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "상자가 실린 아카시아나무 보트",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "상자가 실린 자작나무 보트",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "상자가 실린 정글나무 보트",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "상자가 실린 짙은 참나무 보트",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "상자가 실린 참나무 보트",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "상자가 실린 창백한 참나무 보트",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "솔",
+      "category": "도구 및 유용한 물건",
+      "rarity": "rare"
+    },
+    {
+      "name": "시계",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "아카시아나무 보트",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "아홀로틀이 담긴 양동이",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "안장",
+      "category": "도구 및 유용한 물건",
+      "rarity": "rare"
+    },
+    {
+      "name": "양동이",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "엔더 진주",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "연두색 꾸러미",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "연두색 하네스",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "연어가 담긴 양동이",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "열대어가 담긴 양동이",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "염소 뿔",
+      "category": "도구 및 유용한 물건",
+      "rarity": "rare"
+    },
+    {
+      "name": "올챙이가 담긴 양동이",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "용암 양동이",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "우유 양동이",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "유황 큐브가 담긴 양동이",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "음반",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "이름표",
+      "category": "도구 및 유용한 물건",
+      "rarity": "rare"
+    },
+    {
+      "name": "자석석 나침반",
+      "category": "도구 및 유용한 물건",
+      "rarity": "rare"
+    },
+    {
+      "name": "자작나무 보트",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "자홍색 꾸러미",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "자홍색 하네스",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "정글나무 보트",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "주황색 꾸러미",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "주황색 하네스",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "지도",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "지도 제작대",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "짙은 참나무 보트",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "참나무 보트",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "창백한 참나무 보트",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "책과 깃펜",
+      "category": "도구 및 유용한 물건",
+      "rarity": "rare"
+    },
+    {
+      "name": "철 곡괭이",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "철 괭이",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "철 도끼",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "철 삽",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "청록색 꾸러미",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "청록색 하네스",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "초록색 꾸러미",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "초록색 하네스",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "파란색 꾸러미",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "파란색 하네스",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "폭죽 로켓",
+      "category": "도구 및 유용한 물건",
+      "rarity": "rare"
+    },
+    {
+      "name": "하네스",
+      "category": "도구 및 유용한 물건",
+      "rarity": "common"
+    },
+    {
+      "name": "하늘색 꾸러미",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "하늘색 하네스",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "하얀색 꾸러미",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "하얀색 하네스",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "화염구",
+      "category": "도구 및 유용한 물건",
+      "rarity": "rare"
+    },
+    {
+      "name": "회백색 꾸러미",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "회백색 하네스",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "회색 꾸러미",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "회색 하네스",
+      "category": "도구 및 유용한 물건",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "TNT",
+      "category": "레드스톤 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "TNT가 실린 광산 수레",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "가문비나무 다락문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "가문비나무 문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "가문비나무 버튼",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "가문비나무 압력판",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "가문비나무 울타리 문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "감지 레일",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "경형 무게 압력판",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "공급기",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "관측기",
+      "category": "레드스톤 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "구리 다락문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "구리 문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "구리 전구",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "꿀 블록",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "끈끈이 피스톤",
+      "category": "레드스톤 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "녹슨 구리 다락문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "녹슨 구리 문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "녹슨 구리 전구",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "녹슨 피뢰침",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "대나무 다락문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "대나무 문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "대나무 압력판",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "대나무 울타리 문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "덫 상자",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "돌 버튼",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "돌 압력판",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "동력 레일",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "뒤틀린 다락문",
+      "category": "레드스톤 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "뒤틀린 문",
+      "category": "레드스톤 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "뒤틀린 버튼",
+      "category": "레드스톤 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "뒤틀린 압력판",
+      "category": "레드스톤 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "뒤틀린 울타리 문",
+      "category": "레드스톤 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "레드스톤 가루",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "레드스톤 블록",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "레드스톤 비교기",
+      "category": "레드스톤 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "레드스톤 선",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "레드스톤 조명",
+      "category": "레드스톤 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "레드스톤 중계기",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "레드스톤 횃불",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "레버",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "레일",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "맹그로브나무 다락문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "맹그로브나무 문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "맹그로브나무 버튼",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "맹그로브나무 압력판",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "맹그로브나무 울타리 문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 구리 다락문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 구리 문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 구리 전구",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 녹슨 구리 다락문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 녹슨 구리 문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 녹슨 구리 전구",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 녹슨 피뢰침",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 산화된 구리 다락문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 산화된 구리 랜턴",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 산화된 구리 문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 산화된 구리 전구",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 산화된 피뢰침",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 약간 녹슨 구리 다락문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 약간 녹슨 구리 문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 약간 녹슨 구리 전구",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 약간 녹슨 피뢰침",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀랍칠한 피뢰침",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "발사기",
+      "category": "레드스톤 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "벚나무 다락문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "벚나무 문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "벚나무 버튼",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "벚나무 압력판",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "벚나무 울타리 문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "산화된 구리 다락문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "산화된 구리 문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "산화된 구리 전구",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "산화된 피뢰침",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "상자가 실린 광산 수레",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "스컬크 감지체",
+      "category": "레드스톤 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "슬라임 블록",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "아카시아나무 다락문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "아카시아나무 문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "아카시아나무 버튼",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "아카시아나무 압력판",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "아카시아나무 울타리 문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "약간 녹슨 구리 다락문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "약간 녹슨 구리 문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "약간 녹슨 구리 전구",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "움직이는 피스톤",
+      "category": "레드스톤 블록",
+      "rarity": "legendary"
+    },
+    {
+      "name": "윤나는 흑암 버튼",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "윤나는 흑암 압력판",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "자작나무 다락문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "자작나무 문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "자작나무 버튼",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "자작나무 압력판",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "자작나무 울타리 문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "정글나무 다락문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "정글나무 문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "정글나무 버튼",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "정글나무 압력판",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "정글나무 울타리 문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "제작기",
+      "category": "레드스톤 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "조율한 스컬크 감지체",
+      "category": "레드스톤 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "중형 무게 압력판",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "진홍빛 다락문",
+      "category": "레드스톤 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "진홍빛 문",
+      "category": "레드스톤 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "진홍빛 버튼",
+      "category": "레드스톤 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "진홍빛 압력판",
+      "category": "레드스톤 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "진홍빛 울타리 문",
+      "category": "레드스톤 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "짙은 참나무 다락문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "짙은 참나무 문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "짙은 참나무 버튼",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "짙은 참나무 압력판",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "짙은 참나무 울타리 문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "참나무 다락문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "참나무 문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "참나무 버튼",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "참나무 압력판",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "참나무 울타리 문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "창백한 참나무 다락문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "창백한 참나무 문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "창백한 참나무 버튼",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "창백한 참나무 압력판",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "창백한 참나무 울타리 문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "철 다락문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "철 문",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "철사 덫 갈고리",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "피뢰침",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "피스톤",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "피스톤 헤드",
+      "category": "레드스톤 블록",
+      "rarity": "legendary"
+    },
+    {
+      "name": "햇빛 감지기",
+      "category": "레드스톤 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "호퍼",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "호퍼가 실린 광산 수레",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "화로가 실린 광산 수레",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "활성화 레일",
+      "category": "레드스톤 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "갈색 색유리",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "갈색 색유리 판",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "갈색 양탄자",
+      "category": "색깔 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "갈색 양털",
+      "category": "색깔 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "갈색 유광 테라코타",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "갈색 콘크리트",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "갈색 콘크리트 가루",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "갈색 테라코타",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "검은색 색유리",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "검은색 색유리 판",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "검은색 양탄자",
+      "category": "색깔 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "검은색 양털",
+      "category": "색깔 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "검은색 유광 테라코타",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "검은색 콘크리트",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "검은색 콘크리트 가루",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "검은색 테라코타",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "노란색 양탄자",
+      "category": "색깔 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "노란색 유광 테라코타",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "노란색 콘크리트",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "노란색 콘크리트 가루",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "보라색 색유리",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "보라색 색유리 판",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "보라색 양탄자",
+      "category": "색깔 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "보라색 양털",
+      "category": "색깔 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "보라색 유광 테라코타",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "보라색 콘크리트",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "보라색 콘크리트 가루",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "보라색 테라코타",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "분홍색 색유리",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "분홍색 색유리 판",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "분홍색 양탄자",
+      "category": "색깔 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "분홍색 양털",
+      "category": "색깔 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "분홍색 유광 테라코타",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "분홍색 콘크리트",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "분홍색 콘크리트 가루",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "분홍색 테라코타",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "빨간색 색유리",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "빨간색 색유리 판",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "빨간색 양탄자",
+      "category": "색깔 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "빨간색 양털",
+      "category": "색깔 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "빨간색 유광 테라코타",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "빨간색 콘크리트",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "빨간색 콘크리트 가루",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "빨간색 테라코타",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "연두색 색유리",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "연두색 색유리 판",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "연두색 양탄자",
+      "category": "색깔 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "연두색 양털",
+      "category": "색깔 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "연두색 유광 테라코타",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "연두색 콘크리트",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "연두색 콘크리트 가루",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "연두색 테라코타",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "유리",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "유리판",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "자홍색 색유리",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "자홍색 색유리 판",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "자홍색 양탄자",
+      "category": "색깔 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "자홍색 양털",
+      "category": "색깔 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "자홍색 유광 테라코타",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "자홍색 콘크리트",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "자홍색 콘크리트 가루",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "자홍색 테라코타",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "주황색 색유리",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "주황색 색유리 판",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "주황색 양탄자",
+      "category": "색깔 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "주황색 양털",
+      "category": "색깔 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "주황색 유광 테라코타",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "주황색 콘크리트",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "주황색 콘크리트 가루",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "주황색 테라코타",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "차광 유리",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "청록색 색유리",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "청록색 색유리 판",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "청록색 양탄자",
+      "category": "색깔 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "청록색 양털",
+      "category": "색깔 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "청록색 유광 테라코타",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "청록색 콘크리트",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "청록색 콘크리트 가루",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "청록색 테라코타",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "초록색 색유리",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "초록색 색유리 판",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "초록색 양탄자",
+      "category": "색깔 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "초록색 양털",
+      "category": "색깔 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "초록색 유광 테라코타",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "초록색 콘크리트",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "초록색 콘크리트 가루",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "초록색 테라코타",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "테라코타",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "파란색 색유리",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "파란색 색유리 판",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "파란색 양탄자",
+      "category": "색깔 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "파란색 양털",
+      "category": "색깔 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "파란색 유광 테라코타",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "파란색 콘크리트",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "파란색 콘크리트 가루",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "파란색 테라코타",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "하늘색 색유리",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "하늘색 색유리 판",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "하늘색 양탄자",
+      "category": "색깔 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "하늘색 양털",
+      "category": "색깔 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "하늘색 유광 테라코타",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "하늘색 콘크리트",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "하늘색 콘크리트 가루",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "하늘색 테라코타",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "하얀색 색유리",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "하얀색 색유리 판",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "하얀색 양탄자",
+      "category": "색깔 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "하얀색 양털",
+      "category": "색깔 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "하얀색 유광 테라코타",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "하얀색 콘크리트",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "하얀색 콘크리트 가루",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "하얀색 테라코타",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "회백색 색유리",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "회백색 색유리 판",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "회백색 양탄자",
+      "category": "색깔 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "회백색 양털",
+      "category": "색깔 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "회백색 유광 테라코타",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "회백색 콘크리트",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "회백색 콘크리트 가루",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "회백색 테라코타",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "회색 색유리",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "회색 색유리 판",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "회색 양탄자",
+      "category": "색깔 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "회색 양털",
+      "category": "색깔 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "회색 유광 테라코타",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "회색 콘크리트",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "회색 콘크리트 가루",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "회색 테라코타",
+      "category": "색깔 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "감속의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "감자",
+      "category": "음식 및 음료",
+      "rarity": "common"
+    },
+    {
+      "name": "거미 눈",
+      "category": "음식 및 음료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "거북 도사의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "고통의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "구운 감자",
+      "category": "음식 및 음료",
+      "rarity": "common"
+    },
+    {
+      "name": "꿀이 든 병",
+      "category": "음식 및 음료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "나약함의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "느린 낙하의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "달콤한 열매",
+      "category": "음식 및 음료",
+      "rarity": "common"
+    },
+    {
+      "name": "달콤한 열매 덤불",
+      "category": "음식 및 음료",
+      "rarity": "common"
+    },
+    {
+      "name": "당근",
+      "category": "음식 및 음료",
+      "rarity": "common"
+    },
+    {
+      "name": "도약의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "독 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "독이 있는 감자",
+      "category": "음식 및 음료",
+      "rarity": "common"
+    },
+    {
+      "name": "돌풍의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "동굴 덩굴",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "동굴 덩굴 식물",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "마법이 부여된 황금 사과",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "말린 켈프",
+      "category": "음식 및 음료",
+      "rarity": "common"
+    },
+    {
+      "name": "물병",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "발광 열매",
+      "category": "음식 및 음료",
+      "rarity": "common"
+    },
+    {
+      "name": "방적의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "버섯 스튜",
+      "category": "음식 및 음료",
+      "rarity": "common"
+    },
+    {
+      "name": "벌레 먹음의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "복어",
+      "category": "음식 및 음료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "불길한 병",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "비트",
+      "category": "음식 및 음료",
+      "rarity": "common"
+    },
+    {
+      "name": "비트 수프",
+      "category": "음식 및 음료",
+      "rarity": "common"
+    },
+    {
+      "name": "빵",
+      "category": "음식 및 음료",
+      "rarity": "common"
+    },
+    {
+      "name": "사과",
+      "category": "음식 및 음료",
+      "rarity": "common"
+    },
+    {
+      "name": "수박 조각",
+      "category": "음식 및 음료",
+      "rarity": "common"
+    },
+    {
+      "name": "수상한 스튜",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "수중 호흡의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "스테이크",
+      "category": "음식 및 음료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "신속의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "썩은 살점",
+      "category": "음식 및 음료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "야간 투시의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "어색한 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "열대어",
+      "category": "음식 및 음료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "익히지 않은 닭고기",
+      "category": "음식 및 음료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "익히지 않은 대구",
+      "category": "음식 및 음료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "익히지 않은 돼지고기",
+      "category": "음식 및 음료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "익히지 않은 소고기",
+      "category": "음식 및 음료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "익히지 않은 양고기",
+      "category": "음식 및 음료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "익히지 않은 연어",
+      "category": "음식 및 음료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "익히지 않은 토끼고기",
+      "category": "음식 및 음료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "익힌 닭고기",
+      "category": "음식 및 음료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "익힌 대구",
+      "category": "음식 및 음료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "익힌 돼지고기",
+      "category": "음식 및 음료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "익힌 양고기",
+      "category": "음식 및 음료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "익힌 연어",
+      "category": "음식 및 음료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "익힌 토끼고기",
+      "category": "음식 및 음료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "잔류형 감속의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "잔류형 거북 도사의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "잔류형 고통의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "잔류형 나약함의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "잔류형 느린 낙하의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "잔류형 도약의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "잔류형 독 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "잔류형 돌풍의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "잔류형 물병",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "잔류형 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "잔류형 방적의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "잔류형 벌레 먹음의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "잔류형 수중 호흡의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "잔류형 신속의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "잔류형 야간 투시의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "잔류형 어색한 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "잔류형 재생의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "잔류형 점액화 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "잔류형 제작 불가능 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "잔류형 진한 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "잔류형 치유의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "잔류형 투명화 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "잔류형 평범한 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "잔류형 행운의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "잔류형 화염 저항의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "잔류형 힘의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "재생의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "점액화 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "제작 불가능 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "진한 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "초를 꽂은 케이크",
+      "category": "음식 및 음료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "치유의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "케이크",
+      "category": "음식 및 음료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "쿠키",
+      "category": "음식 및 음료",
+      "rarity": "common"
+    },
+    {
+      "name": "토끼 스튜",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "투명화 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "투척용 감속의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "투척용 거북 도사의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "투척용 고통의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "투척용 나약함의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "투척용 느린 낙하의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "투척용 도약의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "투척용 독 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "투척용 돌풍의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "투척용 물병",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "투척용 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "투척용 방적의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "투척용 벌레 먹음의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "투척용 수중 호흡의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "투척용 신속의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "투척용 야간 투시의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "투척용 어색한 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "투척용 재생의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "투척용 점액화 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "투척용 제작 불가능 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "투척용 진한 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "투척용 치유의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "투척용 투명화 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "투척용 평범한 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "투척용 행운의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "투척용 화염 저항의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "투척용 힘의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "평범한 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "행운의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "호박 파이",
+      "category": "음식 및 음료",
+      "rarity": "common"
+    },
+    {
+      "name": "화염 저항의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "황금 당근",
+      "category": "음식 및 음료",
+      "rarity": "common"
+    },
+    {
+      "name": "황금 민들레",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "황금 사과",
+      "category": "음식 및 음료",
+      "rarity": "common"
+    },
+    {
+      "name": "후렴과",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "힘의 물약",
+      "category": "음식 및 음료",
+      "rarity": "rare"
+    },
+    {
+      "name": "가문비나무 묘목",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "가문비나무 잎",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "갈색 버섯",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "갈색 버섯 블록",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "감은 눈망울꽃",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "개구리알",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "거미줄",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "거북알",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "거친 흙",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "거품 산호",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "거품 산호 블록",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "건초 더미",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "경작지",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "고대 잔해",
+      "category": "자연 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "고사리",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "관 산호",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "관 산호 블록",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "구리 광석",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "구리 원석",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "구리 원석 블록",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "균사체",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "금 광석",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "금 원석",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "금 원석 블록",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "기반암",
+      "category": "자연 블록",
+      "rarity": "legendary"
+    },
+    {
+      "name": "꽁꽁 언 얼음",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "꽃 핀 진달래",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "꽃 핀 진달래 잎",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "낙엽",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "네더 금 광석",
+      "category": "자연 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "네더 석영 광석",
+      "category": "자연 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "네더 싹",
+      "category": "자연 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "네더랙",
+      "category": "자연 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "뇌 산호",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "뇌 산호 블록",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "눈",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "눈 블록",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "늘어진 덩굴",
+      "category": "자연 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "늘어진 덩굴 식물",
+      "category": "자연 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "다이아몬드 광석",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "단단한 진흙",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "대나무",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "덤불",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "덩굴",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "데이지",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "독한 유황",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "뒤틀린 균",
+      "category": "자연 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "뒤틀린 네사체",
+      "category": "자연 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "뒤틀린 뿌리",
+      "category": "자연 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "뒤틀린 사마귀 블록",
+      "category": "자연 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "들꽃",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "뜬 눈망울꽃",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "라일락",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "레드스톤 광석",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "마그마 블록",
+      "category": "자연 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "마른 가스트",
+      "category": "자연 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "마른 덤불",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "말린 켈프 블록",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "매달린 뿌리",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "맹그로브나무 뿌리",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "맹그로브나무 잎",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "맹그로브나무 주아",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "모란",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "모래",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "민들레",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "밀 씨앗",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "반딧불이 덤불",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "발광 이끼",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "발광석",
+      "category": "자연 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "방해석",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "버섯 자루",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "버섯불",
+      "category": "자연 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "벌레잡이풀",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "벌레잡이풀 꼬투리",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "벌레잡이풀 작물",
+      "category": "자연 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "벌집 조각 블록",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "벚나무 묘목",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "부채형 거품 산호",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "부채형 관 산호",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "부채형 뇌 산호",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "부채형 불 산호",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "부채형 사방산호",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "분홍 꽃잎",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "분홍색 튤립",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "불 산호",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "불 산호 블록",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "불우렁쉥이",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "붉은 모래",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "비트 씨앗",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "빨간색 버섯",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "빨간색 버섯 블록",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "빨간색 튤립",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "뼈 블록",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "뾰족한 점적석",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "뿌리내린 흙",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "사방산호",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "사방산호 블록",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "사탕수수",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "석탄 광석",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "선애기별꽃",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "선인장",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "선인장 꽃",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "수레국화",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "수련잎",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "수박",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "수박 줄기",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "수박씨",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "수박이 달린 줄기",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "수지 블록",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "스니퍼 알",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "스컬크",
+      "category": "자연 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "스컬크 비명체",
+      "category": "자연 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "스컬크 정맥",
+      "category": "자연 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "스컬크 촉매",
+      "category": "자연 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "스펀지",
+      "category": "자연 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "심층암 구리 광석",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "심층암 금 광석",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "심층암 다이아몬드 광석",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "심층암 레드스톤 광석",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "심층암 석탄 광석",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "심층암 에메랄드 광석",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "심층암 철 광석",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "심층암 청금석 광석",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "심층암 타일 반 블록",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "싹 틔우는 자수정",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "아카시아나무 묘목",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "알리움",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "양귀비",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "얼음",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "에메랄드 광석",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "영혼 모래",
+      "category": "자연 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "영혼 흙",
+      "category": "자연 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "우는 흑요석",
+      "category": "자연 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "위더 장미",
+      "category": "자연 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "유황 가시",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "은방울꽃",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "이끼 바닥",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "이끼 블록",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "자갈",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "자수정 군집",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "자수정 블록",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "자작나무 묘목",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "작은 자수정 봉오리",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "작은 흘림잎",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "잔디 블록",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "장미 덤불",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "장식된 도자기",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "잭오랜턴",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "점적석 블록",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "점토",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "정글나무 계단",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "정글나무 묘목",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "정글나무 반 블록",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "젖은 스펀지",
+      "category": "자연 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "조각된 호박",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "주황색 튤립",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "죽순",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "죽은 거품 산호",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "죽은 거품 산호 블록",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "죽은 관 산호",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "죽은 관 산호 블록",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "죽은 뇌 산호",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "죽은 뇌 산호 블록",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "죽은 부채형 거품 산호",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "죽은 부채형 관 산호",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "죽은 부채형 뇌 산호",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "죽은 부채형 불 산호",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "죽은 부채형 사방산호",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "죽은 불 산호",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "죽은 불 산호 블록",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "죽은 사방산호",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "죽은 사방산호 블록",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "중간 자수정 봉오리",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "진달래",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "진달래 잎",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "진홍빛 균",
+      "category": "자연 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "진홍빛 네사체",
+      "category": "자연 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "진홍빛 뿌리",
+      "category": "자연 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "진흙",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "진흙에 묻힌 맹그로브나무 뿌리",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "짙은 참나무 묘목",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "참나무 묘목",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "참나무 잎",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "창백한 매달린 이끼",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "창백한 이끼 바닥",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "창백한 이끼 블록",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "창백한 참나무 묘목",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "창백한 참나무 잎",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "철 광석",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "철 원석",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "철 원석 블록",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "청금석 광석",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "켈프",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "켈프 식물",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "코코아",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "코코아 콩",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "큰 고사리",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "큰 자수정 봉오리",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "큰 흘림잎",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "큰 흘림잎 줄기",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "키 작은 마른 잔디",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "키 작은 잔디",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "키 큰 마른 잔디",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "키 큰 잔디",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "키 큰 해초",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "파란색 난초",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "포자 꽃",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "푸른얼음",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "하얀색 튤립",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "해바라기",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "해초",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "호박",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "호박 줄기",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "호박씨",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "호박이 달린 줄기",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "횃불꽃",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "횃불꽃 씨앗",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "횃불꽃 작물",
+      "category": "자연 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "회백토",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "후렴초",
+      "category": "자연 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "후렴화",
+      "category": "자연 블록",
+      "rarity": "rare"
+    },
+    {
+      "name": "휘어진 덩굴",
+      "category": "자연 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "휘어진 덩굴 식물",
+      "category": "자연 블록",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "흑요석",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "흙",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "흙 길",
+      "category": "자연 블록",
+      "rarity": "common"
+    },
+    {
+      "name": "가스트 눈물",
+      "category": "재료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "가죽",
+      "category": "재료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "갈비뼈 갑옷 장식",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "갈색 달걀",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "갈색 염료",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "거북 인갑",
+      "category": "재료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "검은색 염료",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "경험치 병",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "고요 갑옷 장식",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "광부 도자기 조각",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "구리 조각",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "구리 주괴",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "궁수 도자기 조각",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "그릇",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "긁개 도자기 조각",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "금 조각",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "금 주괴",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "길잡이 갑옷 장식",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "깃털",
+      "category": "재료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "꽃 모양 현수막 무늬",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "나사 갑옷 장식",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "낚시꾼 도자기 조각",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "네더 벽돌",
+      "category": "재료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "네더 사마귀",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "네더 석영",
+      "category": "재료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "네더라이트 강화",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "네더라이트 주괴",
+      "category": "재료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "네더라이트 파편",
+      "category": "재료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "네더의 별",
+      "category": "재료",
+      "rarity": "legendary"
+    },
+    {
+      "name": "노란색 염료",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "눈 갑옷 장식",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "눈덩이",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "다발 도자기 조각",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "다이아몬드",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "달걀",
+      "category": "재료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "대장장이 형판",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "돼지 코 갑옷 장식",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "돼지 코 현수막 무늬",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "드래곤의 숨결",
+      "category": "재료",
+      "rarity": "legendary"
+    },
+    {
+      "name": "마그마 크림",
+      "category": "재료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "마법이 부여된 책",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "막대기",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "만세 도자기 조각",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "먹물 주머니",
+      "category": "재료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "메아리 조각",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "무거운 코어",
+      "category": "재료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "무언가 현수막 무늬",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "물결 갑옷 장식",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "밀",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "바다의 심장",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "반짝이는 수박 조각",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "발광 먹물 주머니",
+      "category": "재료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "발광석 가루",
+      "category": "재료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "발효된 거미 눈",
+      "category": "재료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "벌집 조각",
+      "category": "재료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "벡스 갑옷 장식",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "벽돌",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "벽돌 현수막 무늬",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "보라색 염료",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "보물 도자기 조각",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "보초 갑옷 장식",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "부싯돌",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "분홍색 염료",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "불길한 시련 열쇠",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "불탐 도자기 조각",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "브리즈 막대기",
+      "category": "재료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "블레이즈 가루",
+      "category": "재료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "블레이즈 막대기",
+      "category": "재료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "빨간색 염료",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "뼛가루",
+      "category": "재료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "사구 대장장이 형판",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "사육사 갑옷 장식",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "석탄",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "설탕",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "셜커 껍데기",
+      "category": "재료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "소용돌이 현수막 무늬",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "수지 덩어리",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "수지 벽돌",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "숯",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "슬라임볼",
+      "category": "재료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "시련 열쇠",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "실",
+      "category": "재료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "심장 도자기 조각",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "아르마딜로 인갑",
+      "category": "재료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "애도자 도자기 조각",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "앵무조개 껍데기",
+      "category": "재료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "야생 갑옷 장식",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "약간 녹슨 피뢰침",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "양조가 도자기 조각",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "에메랄드",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "엔더의 눈",
+      "category": "재료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "연두색 염료",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "위험 도자기 조각",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "유리병",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "음반 파편",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "자수정 조각",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "자홍색 염료",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "점토 덩이",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "조형가 갑옷 장식",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "종이",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "주인 갑옷 장식",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "주황색 염료",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "지구 현수막 무늬",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "짖음 도자기 조각",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "찢어진 심장 도자기 조각",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "책",
+      "category": "재료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "철 조각",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "철 주괴",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "철사 덫",
+      "category": "재료",
+      "rarity": "legendary"
+    },
+    {
+      "name": "첨탑 갑옷 장식",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "청금석",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "청록색 염료",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "초록색 염료",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "친구 도자기 조각",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "칼날 도자기 조각",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "콧바람 도자기 조각",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "크리퍼 모양 현수막 무늬",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "탐험가 도자기 조각",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "토끼 가죽",
+      "category": "재료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "토끼발",
+      "category": "재료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "톱니 테두리 현수막 무늬",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "튀긴 후렴과",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "파란색 달걀",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "파란색 염료",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "파수 갑옷 장식",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "팬텀 막",
+      "category": "재료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "폭죽 탄약",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "풍부 도자기 조각",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "프리즈머린 수정",
+      "category": "재료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "프리즈머린 조각",
+      "category": "재료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "피신처 도자기 조각",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "하늘색 염료",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "하얀색 염료",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "해골 도자기 조각",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "해골 모양 현수막 무늬",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "해안 갑옷 장식",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "화약",
+      "category": "재료",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "회백색 염료",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "회색 염료",
+      "category": "재료",
+      "rarity": "common"
+    },
+    {
+      "name": "흐름 갑옷 장식",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "흐름 현수막 무늬",
+      "category": "재료",
+      "rarity": "rare"
+    },
+    {
+      "name": "가죽 말 갑옷",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "가죽 모자",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "가죽 바지",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "가죽 장화",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "가죽 조끼",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "감속의 화살",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "거북 도사의 화살",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "거북 등딱지",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "고통의 화살",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "구리 검",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "구리 레깅스",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "구리 말 갑옷",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "구리 부츠",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "구리 앵무조개 갑옷",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "구리 창",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "구리 투구",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "구리 흉갑",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "금 검",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "금 레깅스",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "금 말 갑옷",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "금 부츠",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "금 앵무조개 갑옷",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "금 창",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "금 투구",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "금 흉갑",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "나무 검",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "나무 창",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "나약함의 화살",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "네더라이트 검",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "네더라이트 레깅스",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "네더라이트 말 갑옷",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "네더라이트 부츠",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "네더라이트 앵무조개 갑옷",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "네더라이트 창",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "네더라이트 투구",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "네더라이트 흉갑",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "느린 낙하의 화살",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "늑대 갑옷",
+      "category": "전투",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "다이아몬드 검",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "다이아몬드 레깅스",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "다이아몬드 말 갑옷",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "다이아몬드 부츠",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "다이아몬드 앵무조개 갑옷",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "다이아몬드 창",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "다이아몬드 투구",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "다이아몬드 흉갑",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "도약의 화살",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "독 화살",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "돌 검",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "돌 창",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "돌풍구",
+      "category": "전투",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "돌풍의 화살",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "물약이 묻은 제작 불가능 화살",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "물약이 묻은 화살",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "방적의 화살",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "방패",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "벌레 먹음의 화살",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "분광 화살",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "분무 화살",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "불사의 토템",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "사슬 레깅스",
+      "category": "전투",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "사슬 부츠",
+      "category": "전투",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "사슬 투구",
+      "category": "전투",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "사슬 흉갑",
+      "category": "전투",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "삼지창",
+      "category": "전투",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "쇠뇌",
+      "category": "전투",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "수중 호흡의 화살",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "신속의 화살",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "야간 투시의 화살",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "재생의 화살",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "점액화 화살",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "철 검",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "철 레깅스",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "철 말 갑옷",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "철 부츠",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "철 앵무조개 갑옷",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "철 창",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "철 투구",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "철 흉갑",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "철퇴",
+      "category": "전투",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "치유의 화살",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "투명화 화살",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "행운의 화살",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "화살",
+      "category": "전투",
+      "rarity": "common"
+    },
+    {
+      "name": "화염 저항의 화살",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "활",
+      "category": "전투",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "힘의 화살",
+      "category": "전투",
+      "rarity": "rare"
+    },
+    {
+      "name": "가디언 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "가루눈",
+      "category": "특수 아이템",
+      "rarity": "common"
+    },
+    {
+      "name": "가스트 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "개구리 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "거미 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "거북 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "거품 기둥",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "고양이 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "공허 공기",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "구리 골렘 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "구조물 공허 공간",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "구조물 블록",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "규화한 참나무 반 블록",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "꿀벌 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "낙타 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "낙타 허스크 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "난폭한 피글린 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "네더 차원문",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "노새 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "눈 골렘 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "늑대 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "닭 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "당나귀 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "대구 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "돌고래 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "동굴 거미 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "동굴 공기",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "돼지 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "드라운드 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "디버그 막대기",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "떠돌이 상인 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "라마 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "마그마 큐브 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "마녀 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "말 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "명령 블록",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "명령 블록이 실린 광산 수레",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "몬스터 생성기",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "무시룸 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "물",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "박쥐 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "반복형 명령 블록",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "발광 오징어 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "방벽",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "벡스 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "변명자 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "보그드 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "복어 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "북극곰 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "불",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "브리즈 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "블레이즈 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "빛",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "살얼음",
+      "category": "특수 아이템",
+      "rarity": "common"
+    },
+    {
+      "name": "상인 라마 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "셜커 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "소 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "소환사 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "스니퍼 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "스켈레톤 말 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "스켈레톤 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "스트라이더 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "스트레이 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "슬라임 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "시련 생성기",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "아르마딜로 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "아홀로틀 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "알레이 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "앵무새 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "앵무조개 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "약탈자 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "양 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "엔더 드래곤 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "엔더마이트 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "엔더맨 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "엔드 관문",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "엔드 차원문",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "엘더 가디언 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "여우 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "연쇄형 명령 블록",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "연어 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "열대어 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "염소 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "오실롯 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "오징어 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "올챙이 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "용암",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "워든 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "위더 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "위더 스켈레톤 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "유황 큐브 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "조글린 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "좀벌레 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "좀비 말 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "좀비 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "좀비 앵무조개 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "좀비 주민 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "좀비화 피글린 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "주민 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "지식의 책",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "직소 블록",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "철 골렘 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "크리킹 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "크리킹 심장",
+      "category": "특수 아이템",
+      "rarity": "rare"
+    },
+    {
+      "name": "크리퍼 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "테스트 블록",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "테스트 인스턴스 블록",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "토끼 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "파괴수 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "파치트 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "판다 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "팬텀 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "피글린 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "행복한 가스트 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "허스크 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    },
+    {
+      "name": "호글린 생성 알",
+      "category": "특수 아이템",
+      "rarity": "legendary"
+    }
+  ]
+}
