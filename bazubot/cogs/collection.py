@@ -167,6 +167,50 @@ class Collection(commands.Cog):
             )
         await interaction.response.send_message(embed=embed)
 
+    @app_commands.command(name="수집률", description="카드 수집률을 확인합니다.")
+    async def collection_rate(self, interaction: discord.Interaction):
+        user_id = str(interaction.user.id)
+        with get_db() as conn:
+            all_cards = cards_module.get_all_cards(conn)
+            owned_rows = conn.execute(
+                "SELECT DISTINCT card_id FROM inventory WHERE user_id = ? AND quantity > 0",
+                (user_id,),
+            ).fetchall()
+        owned_ids = {row["card_id"] for row in owned_rows}
+
+        total = len(all_cards)
+        if total == 0:
+            await interaction.response.send_message("등록된 카드가 없어요.", ephemeral=True)
+            return
+
+        owned = sum(1 for c in all_cards if c["id"] in owned_ids)
+        percent = owned / total * 100
+
+        by_total: dict[str, int] = {r: 0 for r in cards_module.RARITY_ORDER}
+        by_owned: dict[str, int] = {r: 0 for r in cards_module.RARITY_ORDER}
+        for c in all_cards:
+            by_total[c["rarity"]] += 1
+            if c["id"] in owned_ids:
+                by_owned[c["rarity"]] += 1
+
+        embed = discord.Embed(
+            title=f"📊 {interaction.user.display_name}님의 수집률",
+            description=f"전체 **{owned:,} / {total:,}장** ({percent:.1f}%)",
+            color=discord.Color.blurple(),
+        )
+        for rarity in cards_module.RARITY_ORDER:
+            tier_total = by_total[rarity]
+            if tier_total == 0:
+                continue
+            tier_owned = by_owned[rarity]
+            tier_percent = tier_owned / tier_total * 100
+            embed.add_field(
+                name=f"{cards_module.RARITY_EMOJI[rarity]} {cards_module.RARITY_LABEL[rarity]}",
+                value=f"{tier_owned:,} / {tier_total:,} ({tier_percent:.1f}%)",
+                inline=True,
+            )
+        await interaction.response.send_message(embed=embed)
+
     @app_commands.command(
         name="카드뽑기", description=f"{economy.GACHA_COST:,}달러로 카드를 뽑습니다."
     )
