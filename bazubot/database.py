@@ -141,6 +141,24 @@ def _migrate_schema(conn, guild_id: str) -> None:
             "ALTER TABLE stock_holding ADD COLUMN total_cost REAL NOT NULL DEFAULT 0"
         )
 
+    # 하루 한 번 직업 변경 제한을 위해 나중에 추가된 컬럼.
+    # 기존 취업자는 빈 값이라 오늘 한 번은 바로 바꿀 수 있다.
+    job_columns = _column_names(conn, "job")
+    if job_columns and "last_changed" not in job_columns:
+        conn.execute("ALTER TABLE job ADD COLUMN last_changed TEXT NOT NULL DEFAULT ''")
+
+    # 사업가 명의 주식을 지원하면서 추가된 컬럼.
+    stock_columns = _column_names(conn, "stock")
+    if stock_columns and "base_price" not in stock_columns:
+        conn.execute("ALTER TABLE stock ADD COLUMN base_price INTEGER NOT NULL DEFAULT 300")
+        # 기존 몹 주식의 기본가를 실제 값으로 채운다.
+        from . import stocks as stocks_module
+
+        for name, price in stocks_module.BASE_PRICES.items():
+            conn.execute("UPDATE stock SET base_price = ? WHERE name = ?", (price, name))
+    if stock_columns and "owner_id" not in stock_columns:
+        conn.execute("ALTER TABLE stock ADD COLUMN owner_id TEXT")
+
 
 def _create_tables(conn) -> None:
     conn.execute(
@@ -175,7 +193,9 @@ def _create_tables(conn) -> None:
         """
         CREATE TABLE IF NOT EXISTS job (
             user_id TEXT PRIMARY KEY,
-            job TEXT NOT NULL
+            job TEXT NOT NULL,
+            -- 직업을 마지막으로 바꾼 날. 하루(오전 7시 기준) 한 번 제한에 쓴다.
+            last_changed TEXT NOT NULL DEFAULT ''
         )
         """
     )
@@ -203,7 +223,11 @@ def _create_tables(conn) -> None:
         CREATE TABLE IF NOT EXISTS stock (
             name TEXT PRIMARY KEY,
             price INTEGER NOT NULL,
-            prev_price INTEGER NOT NULL
+            prev_price INTEGER NOT NULL,
+            -- 폭락 후 되돌아갈 가격. 몹 주식은 종목마다 다르고 사업가 주식은 300이다.
+            base_price INTEGER NOT NULL DEFAULT 300,
+            -- 사업가 명의 주식이면 그 사람의 user_id. 기본 몹 주식은 NULL.
+            owner_id TEXT
         )
         """
     )

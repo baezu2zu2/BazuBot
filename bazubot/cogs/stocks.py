@@ -7,10 +7,7 @@ from .. import stocks as stocks_module
 from ..database import existing_guild_ids, get_db
 from ..discord_utils import require_guild
 
-STOCK_CHOICES = [
-    app_commands.Choice(name=f"{stocks_module.STOCK_EMOJI[name]} {name}", value=name)
-    for name in stocks_module.STOCK_NAMES
-]
+PRICE_LIST_LIMIT = 25
 
 
 def _cost_label(total_cost: float, quantity: int) -> str:
@@ -60,6 +57,18 @@ class Stocks(commands.Cog):
     async def before_tick(self):
         await self.bot.wait_until_ready()
 
+    async def stock_autocomplete(self, interaction: discord.Interaction, current: str):
+        # 사업가 명의 주식이 수시로 생기므로 고정 선택지 대신 자동완성을 쓴다.
+        if interaction.guild_id is None:
+            return []
+        with get_db(interaction.guild_id) as conn:
+            names = stocks_module.stock_names(conn)
+        return [
+            app_commands.Choice(name=f"{stocks_module.stock_emoji(name)} {name}", value=name)
+            for name in names
+            if current.lower() in name.lower()
+        ][:25]
+
     @app_commands.command(name="주식", description="주식 시세를 확인합니다.")
     async def prices(self, interaction: discord.Interaction):
         guild_id = await require_guild(interaction)
@@ -69,11 +78,12 @@ class Stocks(commands.Cog):
             rows = stocks_module.get_stocks(conn)
 
         lines = []
-        for row in rows:
+        # 사업가 주식 때문에 종목 수가 계속 늘 수 있어 표시 개수를 제한한다.
+        for row in rows[:PRICE_LIST_LIMIT]:
             delta = row["price"] - row["prev_price"]
             arrow = "🔺" if delta > 0 else "🔻" if delta < 0 else "➖"
             lines.append(
-                f"{stocks_module.STOCK_EMOJI[row['name']]} **{row['name']}** — "
+                f"{stocks_module.stock_emoji(row['name'])} **{row['name']}** — "
                 f"{row['price']:,}달러 {arrow} {delta:+,}"
             )
 
@@ -82,6 +92,10 @@ class Stocks(commands.Cog):
             if stocks_module.is_market_open()
             else "장이 닫혔어요 — 한국시간 12시부터 시세가 움직여요"
         )
+        if len(rows) > PRICE_LIST_LIMIT:
+            market_note = (
+                f"{len(rows)}종목 중 상위 {PRICE_LIST_LIMIT}개 표시 · {market_note}"
+            )
         embed = discord.Embed(
             title="📈 주식 시세",
             description="\n".join(lines),
@@ -92,11 +106,11 @@ class Stocks(commands.Cog):
 
     @app_commands.command(name="주식구매", description="주식을 현재 시세로 구매합니다.")
     @app_commands.describe(종목="구매할 종목", 수량="구매할 주식 수")
-    @app_commands.choices(종목=STOCK_CHOICES)
+    @app_commands.autocomplete(종목=stock_autocomplete)
     async def buy(
         self,
         interaction: discord.Interaction,
-        종목: app_commands.Choice[str],
+        종목: str,
         수량: app_commands.Range[int, 1] = 1,
     ):
         guild_id = await require_guild(interaction)
@@ -104,10 +118,10 @@ class Stocks(commands.Cog):
             return
         user_id = str(interaction.user.id)
         with get_db(guild_id) as conn:
-            stock = stocks_module.get_stock(conn, 종목.value)
+            stock = stocks_module.get_stock(conn, 종목)
             if stock is None:
                 await interaction.response.send_message(
-                    f"'{종목.value}' 종목을 찾을 수 없어요.", ephemeral=True
+                    f"'{종목}' 종목을 찾을 수 없어요.", ephemeral=True
                 )
                 return
 
@@ -126,8 +140,8 @@ class Stocks(commands.Cog):
             economy.use_free_stock_buys(conn, user_id, free)
             new_balance = balance - total
             economy.set_balance(conn, user_id, new_balance)
-            stocks_module.add_holding(conn, user_id, 종목.value, 수량, total)
-            owned = stocks_module.get_quantity(conn, user_id, 종목.value)
+            stocks_module.add_holding(conn, user_id, 종목, 수량, total)
+            owned = stocks_module.get_quantity(conn, user_id, 종목)
             free_left = economy.free_stock_buys_left(conn, user_id)
 
         free_note = (
@@ -136,18 +150,18 @@ class Stocks(commands.Cog):
             else ""
         )
         await interaction.response.send_message(
-            f"📈 {stocks_module.STOCK_EMOJI[종목.value]} **{종목.value}** {수량:,}주를 "
+            f"📈 {stocks_module.stock_emoji(종목)} **{종목}** {수량:,}주를 "
             f"**{total:,}달러**에 구매했어요! (주당 {stock['price']:,}달러)"
             f"{free_note}\n보유: {owned:,}주 / 잔액: **{new_balance:,}달러**"
         )
 
     @app_commands.command(name="주식판매", description="보유한 주식을 현재 시세로 판매합니다.")
     @app_commands.describe(종목="판매할 종목", 수량="판매할 주식 수")
-    @app_commands.choices(종목=STOCK_CHOICES)
+    @app_commands.autocomplete(종목=stock_autocomplete)
     async def sell(
         self,
         interaction: discord.Interaction,
-        종목: app_commands.Choice[str],
+        종목: str,
         수량: app_commands.Range[int, 1] = 1,
     ):
         guild_id = await require_guild(interaction)
@@ -155,14 +169,14 @@ class Stocks(commands.Cog):
             return
         user_id = str(interaction.user.id)
         with get_db(guild_id) as conn:
-            stock = stocks_module.get_stock(conn, 종목.value)
+            stock = stocks_module.get_stock(conn, 종목)
             if stock is None:
                 await interaction.response.send_message(
-                    f"'{종목.value}' 종목을 찾을 수 없어요.", ephemeral=True
+                    f"'{종목}' 종목을 찾을 수 없어요.", ephemeral=True
                 )
                 return
 
-            owned = stocks_module.get_quantity(conn, user_id, 종목.value)
+            owned = stocks_module.get_quantity(conn, user_id, 종목)
             if owned < 수량:
                 await interaction.response.send_message(
                     f"보유 수량이 부족해요! (보유: {owned:,}주)", ephemeral=True
@@ -170,13 +184,13 @@ class Stocks(commands.Cog):
                 return
 
             total = stock["price"] * 수량
-            stocks_module.remove_holding(conn, user_id, 종목.value, 수량)
+            stocks_module.remove_holding(conn, user_id, 종목, 수량)
             balance = economy.ensure_wallet(conn, user_id)
             new_balance = balance + total
             economy.set_balance(conn, user_id, new_balance)
 
         await interaction.response.send_message(
-            f"📉 {stocks_module.STOCK_EMOJI[종목.value]} **{종목.value}** {수량:,}주를 "
+            f"📉 {stocks_module.stock_emoji(종목)} **{종목}** {수량:,}주를 "
             f"**{total:,}달러**에 판매했어요! (주당 {stock['price']:,}달러)\n"
             f"보유: {owned - 수량:,}주 / 잔액: **{new_balance:,}달러**"
         )
@@ -203,7 +217,7 @@ class Stocks(commands.Cog):
             profit, rate = stocks_module.profit_and_rate(value, row["total_cost"])
             cost_label = _cost_label(row["total_cost"], row["quantity"])
             lines.append(
-                f"{stocks_module.STOCK_EMOJI[row['stock_name']]} **{row['stock_name']}** "
+                f"{stocks_module.stock_emoji(row['stock_name'])} **{row['stock_name']}** "
                 f"×{row['quantity']:,} — {value:,}달러 (주당 {row['price']:,}달러)\n"
                 f"└ {cost_label} · {_profit_label(profit, rate)}"
             )

@@ -6,6 +6,7 @@ from discord import app_commands
 from discord.ext import commands, tasks
 
 from .. import economy
+from .. import stocks as stocks_module
 from ..checks import is_test_guild
 from ..database import existing_guild_ids, get_db
 from ..discord_utils import require_guild, resolve_display_name
@@ -136,7 +137,8 @@ class Economy(commands.Cog):
         await interaction.response.send_message(embed=embed)
 
     @app_commands.command(
-        name="취직", description="직업을 선택합니다. 직업에 따라 매일 급여나 혜택을 받아요."
+        name="취직",
+        description="직업을 선택합니다. 하루에 한 번만 바꿀 수 있어요.",
     )
     @app_commands.describe(직업="선택할 직업")
     @app_commands.choices(
@@ -154,11 +156,52 @@ class Economy(commands.Cog):
             return
         user_id = str(interaction.user.id)
         with get_db(guild_id) as conn:
+            current = economy.get_job(conn, user_id)
+            if current == 직업.value:
+                await interaction.response.send_message(
+                    f"이미 {economy.JOB_EMOJI[current]} **{current}**(으)로 일하고 있어요.",
+                    ephemeral=True,
+                )
+                return
+            if economy.changed_job_today(conn, user_id):
+                reset = economy.next_day_start()
+                await interaction.response.send_message(
+                    f"직업은 하루에 한 번만 바꿀 수 있어요. "
+                    f"지금은 {economy.JOB_EMOJI[current]} **{current}**(이)고, "
+                    f"{reset.month}월 {reset.day}일 오전 7시부터 다시 바꿀 수 있어요.",
+                    ephemeral=True,
+                )
+                return
             economy.set_job(conn, user_id, 직업.value)
+            issued_stock = None
+            if 직업.value == "사업가":
+                # 사업가는 본인 명의 주식이 상장된다. (다른 종목과 기능은 동일)
+                issued_stock = stocks_module.create_user_stock(
+                    conn, user_id, interaction.user.display_name
+                )
+
+        emoji = economy.JOB_EMOJI[직업.value]
+        if current:
+            headline = (
+                f"{emoji} {interaction.user.display_name}님이 "
+                f"{economy.JOB_EMOJI[current]} **{current}**에서 "
+                f"**{직업.value}**(으)로 이직했어요!"
+            )
+        else:
+            headline = (
+                f"{emoji} {interaction.user.display_name}님이 "
+                f"**{직업.value}**(으)로 취직했어요!"
+            )
+        stock_note = ""
+        if issued_stock:
+            stock_note = (
+                f"\n{stocks_module.USER_STOCK_EMOJI} **{issued_stock}** 주식이 상장돼 있어요! "
+                f"(기본가 {stocks_module.USER_STOCK_BASE_PRICE:,}달러)"
+            )
         await interaction.response.send_message(
-            f"{economy.JOB_EMOJI[직업.value]} {interaction.user.display_name}님이 "
-            f"**{직업.value}**(으)로 취직했어요! ({economy.JOB_DESCRIPTION[직업.value]})\n"
-            f"{economy.job_benefit_note(직업.value)}",
+            f"{headline} ({economy.JOB_DESCRIPTION[직업.value]})\n"
+            f"{economy.job_benefit_note(직업.value)}\n"
+            f"직업은 하루에 한 번만 바꿀 수 있어요.{stock_note}",
             ephemeral=True,
         )
 

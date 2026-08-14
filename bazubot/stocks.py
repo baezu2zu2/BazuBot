@@ -21,6 +21,11 @@ STOCK_EMOJI = {
 }
 STOCK_NAMES = list(BASE_PRICES)
 
+# 사업가가 되면 본인 명의로 발행되는 주식. 기능은 몹 주식과 완전히 같다.
+USER_STOCK_BASE_PRICE = 300
+USER_STOCK_EMOJI = "💼"
+MAX_STOCK_NAME_LENGTH = 24
+
 # 10초마다 -10~11달러만큼 변동, 단 한국시간 12시~24시에만.
 TICK_SECONDS = 10
 DELTA_MIN = -10
@@ -34,10 +39,46 @@ DIVIDEND_RATE_PER_SECOND = 0.0001 / 100
 def sync_stocks(conn) -> None:
     for name, price in BASE_PRICES.items():
         conn.execute(
-            "INSERT INTO stock (name, price, prev_price) VALUES (?, ?, ?) "
+            "INSERT INTO stock (name, price, prev_price, base_price) VALUES (?, ?, ?, ?) "
             "ON CONFLICT(name) DO NOTHING",
-            (name, price, price),
+            (name, price, price, price),
         )
+
+
+def stock_emoji(name: str) -> str:
+    """사업가 명의 주식은 고정 이모지를 쓴다."""
+    return STOCK_EMOJI.get(name, USER_STOCK_EMOJI)
+
+
+def stock_names(conn) -> list[str]:
+    return [row["name"] for row in conn.execute("SELECT name FROM stock ORDER BY price DESC")]
+
+
+def user_stock_name(conn, owner_id: str) -> str | None:
+    row = conn.execute("SELECT name FROM stock WHERE owner_id = ?", (owner_id,)).fetchone()
+    return row["name"] if row else None
+
+
+def create_user_stock(conn, owner_id: str, display_name: str) -> str:
+    """사업가 명의 주식을 발행한다. 이미 있으면 그대로 두고 이름만 돌려준다."""
+    existing = user_stock_name(conn, owner_id)
+    if existing:
+        return existing
+
+    base = display_name.strip()[:MAX_STOCK_NAME_LENGTH] or f"유저 {owner_id}"
+    name = base
+    suffix = 2
+    # 이름이 겹치면 뒤에 번호를 붙인다. (종목 이름이 기본키라 중복될 수 없다)
+    while conn.execute("SELECT 1 FROM stock WHERE name = ?", (name,)).fetchone():
+        name = f"{base} ({suffix})"
+        suffix += 1
+
+    conn.execute(
+        "INSERT INTO stock (name, price, prev_price, base_price, owner_id) "
+        "VALUES (?, ?, ?, ?, ?)",
+        (name, USER_STOCK_BASE_PRICE, USER_STOCK_BASE_PRICE, USER_STOCK_BASE_PRICE, owner_id),
+    )
+    return name
 
 
 def is_market_open(now: datetime | None = None) -> bool:
@@ -56,12 +97,12 @@ def get_stock(conn, name: str) -> sqlite3.Row | None:
 def tick_prices(conn) -> list[str]:
     """가격을 한 번 변동시키고, 상장폐지된 종목 이름을 돌려줍니다."""
     crashed = []
-    for row in conn.execute("SELECT name, price FROM stock").fetchall():
+    for row in conn.execute("SELECT name, price, base_price FROM stock").fetchall():
         new_price = row["price"] + random.randint(DELTA_MIN, DELTA_MAX)
         if new_price <= 0:
             # 0달러 이하로 떨어지면 모두가 그 주식을 잃고 기본값으로 초기화된다.
             conn.execute("DELETE FROM stock_holding WHERE stock_name = ?", (row["name"],))
-            new_price = BASE_PRICES[row["name"]]
+            new_price = row["base_price"]
             crashed.append(row["name"])
         conn.execute(
             "UPDATE stock SET price = ?, prev_price = ? WHERE name = ?",

@@ -1,8 +1,12 @@
 import random
-from datetime import datetime
+from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
 KST = ZoneInfo("Asia/Seoul")
+
+# 급여 지급 시각과 동일하게 "하루"의 경계를 한국시간 오전 7시로 잡는다.
+# (직업 변경 제한, 무료 혜택 초기화 모두 이 기준을 쓴다)
+DAY_START_HOUR = 7
 
 STARTING_BALANCE = 500
 GACHA_COST = 300
@@ -50,15 +54,24 @@ def spin() -> str:
 
 def set_job(conn, user_id: str, job: str) -> None:
     conn.execute(
-        "INSERT INTO job (user_id, job) VALUES (?, ?) "
-        "ON CONFLICT(user_id) DO UPDATE SET job = excluded.job",
-        (user_id, job),
+        "INSERT INTO job (user_id, job, last_changed) VALUES (?, ?, ?) "
+        "ON CONFLICT(user_id) DO UPDATE SET job = excluded.job, "
+        "last_changed = excluded.last_changed",
+        (user_id, job, current_day()),
     )
 
 
 def get_job(conn, user_id: str) -> str | None:
     row = conn.execute("SELECT job FROM job WHERE user_id = ?", (user_id,)).fetchone()
     return row["job"] if row else None
+
+
+def changed_job_today(conn, user_id: str) -> bool:
+    """직업 변경은 하루(오전 7시 기준)에 한 번만 가능하다."""
+    row = conn.execute(
+        "SELECT last_changed FROM job WHERE user_id = ?", (user_id,)
+    ).fetchone()
+    return bool(row) and row["last_changed"] == current_day()
 
 
 def pay_for_job(job: str) -> int:
@@ -75,17 +88,30 @@ def pay_for_job(job: str) -> int:
 
 def job_benefit_note(job: str) -> str:
     if job in PERK_JOBS:
-        return "혜택은 매일 한국시간 0시에 초기화돼요."
+        return "혜택은 매일 한국시간 오전 7시에 초기화돼요."
     return "매일 한국시간 오전 7시에 급여가 지급돼요."
 
 
-def _today_kst() -> str:
-    return datetime.now(KST).date().isoformat()
+def current_day(now: datetime | None = None) -> str:
+    """오전 7시에 시작하는 '하루'의 이름. 7시 이전은 아직 어제로 친다."""
+    now = now or datetime.now(KST)
+    if now.hour < DAY_START_HOUR:
+        now -= timedelta(days=1)
+    return now.date().isoformat()
+
+
+def next_day_start(now: datetime | None = None) -> datetime:
+    """다음으로 하루가 바뀌는(= 초기화되는) 시각."""
+    now = now or datetime.now(KST)
+    reset = now.replace(hour=DAY_START_HOUR, minute=0, second=0, microsecond=0)
+    if now.hour >= DAY_START_HOUR:
+        reset += timedelta(days=1)
+    return reset
 
 
 def _get_perk_row(conn, user_id: str):
-    """오늘 날짜(한국시간) 기준으로 사용량을 초기화한 뒤 돌려줍니다."""
-    today = _today_kst()
+    """오늘(오전 7시 기준) 사용량을 초기화한 뒤 돌려줍니다."""
+    today = current_day()
     conn.execute(
         "INSERT INTO job_perk (user_id, perk_date) VALUES (?, ?) "
         "ON CONFLICT(user_id) DO NOTHING",
