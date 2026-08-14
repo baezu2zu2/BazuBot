@@ -28,16 +28,18 @@ class BazuBot(commands.Bot):
         await self.load_extension("bazubot.cogs.economy")
         await self.load_extension("bazubot.cogs.market")
 
+        # Global sync so commands work in every server the bot is invited to
+        # (propagation can take up to ~1 hour for Discord to roll out).
+        await self.tree.sync()
+
         if GUILD_ID:
+            # Also push an instant copy to the dev/test guild so command
+            # changes show up immediately while iterating locally. This
+            # guild will see the same commands twice (global + guild copy)
+            # until Discord's global rollout catches up — expected during dev.
             guild = discord.Object(id=int(GUILD_ID))
             self.tree.copy_global_to(guild=guild)
             await self.tree.sync(guild=guild)
-            # Clear any leftover globally-synced commands so they don't show up
-            # duplicated alongside the guild-scoped ones.
-            self.tree.clear_commands(guild=None)
-            await self.tree.sync()
-        else:
-            await self.tree.sync()
 
 
 bot = BazuBot()
