@@ -27,8 +27,8 @@ DELTA_MIN = -10
 DELTA_MAX = 11
 TRADING_START_HOUR = 12
 
-# 1초마다 보유 주식 평가액의 0.00001%가 배당금으로 쌓임.
-DIVIDEND_RATE_PER_SECOND = 0.00001 / 100
+# 1초마다 보유 주식 평가액의 0.0001%가 배당금으로 쌓임.
+DIVIDEND_RATE_PER_SECOND = 0.0001 / 100
 
 
 def sync_stocks(conn) -> None:
