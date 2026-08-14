@@ -7,8 +7,8 @@ from discord.ext import commands, tasks
 
 from .. import economy
 from ..checks import is_test_guild
-from ..database import get_db
-from ..discord_utils import resolve_display_name
+from ..database import existing_guild_ids, get_db
+from ..discord_utils import require_guild, resolve_display_name
 
 KST = ZoneInfo("Asia/Seoul")
 SALARY_TIME = time(hour=7, minute=0, tzinfo=KST)
@@ -24,12 +24,14 @@ class Economy(commands.Cog):
 
     @tasks.loop(time=SALARY_TIME)
     async def pay_salary(self):
-        with get_db() as conn:
-            rows = conn.execute("SELECT user_id, job FROM job").fetchall()
-            for row in rows:
-                pay = economy.pay_for_job(row["job"])
-                balance = economy.ensure_wallet(conn, row["user_id"])
-                economy.set_balance(conn, row["user_id"], balance + pay)
+        # 서버마다 DB가 따로 있으므로 각 서버의 급여를 따로 지급한다.
+        for guild_id in existing_guild_ids():
+            with get_db(guild_id) as conn:
+                rows = conn.execute("SELECT user_id, job FROM job").fetchall()
+                for row in rows:
+                    pay = economy.pay_for_job(row["job"])
+                    balance = economy.ensure_wallet(conn, row["user_id"])
+                    economy.set_balance(conn, row["user_id"], balance + pay)
 
     @pay_salary.before_loop
     async def before_pay_salary(self):
@@ -37,8 +39,11 @@ class Economy(commands.Cog):
 
     @app_commands.command(name="잔액", description="내 잔액을 확인합니다.")
     async def balance(self, interaction: discord.Interaction):
+        guild_id = await require_guild(interaction)
+        if guild_id is None:
+            return
         user_id = str(interaction.user.id)
-        with get_db() as conn:
+        with get_db(guild_id) as conn:
             balance = economy.ensure_wallet(conn, user_id)
         await interaction.response.send_message(
             f"💰 {interaction.user.display_name}님의 잔액: **{balance:,}달러**"
@@ -46,8 +51,11 @@ class Economy(commands.Cog):
 
     @app_commands.command(name="돈랭킹", description="잔액 랭킹을 확인합니다.")
     async def money_leaderboard(self, interaction: discord.Interaction):
+        guild_id = await require_guild(interaction)
+        if guild_id is None:
+            return
         user_id = str(interaction.user.id)
-        with get_db() as conn:
+        with get_db(guild_id) as conn:
             rows = conn.execute(
                 "SELECT user_id, balance FROM wallet ORDER BY balance DESC"
             ).fetchall()
@@ -96,8 +104,11 @@ class Economy(commands.Cog):
         금액: app_commands.Range[int, 1],
         색상: app_commands.Choice[str],
     ):
+        guild_id = await require_guild(interaction)
+        if guild_id is None:
+            return
         user_id = str(interaction.user.id)
-        with get_db() as conn:
+        with get_db(guild_id) as conn:
             balance = economy.ensure_wallet(conn, user_id)
             if 금액 > balance:
                 await interaction.response.send_message(
@@ -125,7 +136,7 @@ class Economy(commands.Cog):
         await interaction.response.send_message(embed=embed)
 
     @app_commands.command(
-        name="취직", description="직업을 선택합니다. 매일 한국시간 오전 7시에 급여를 받아요."
+        name="취직", description="직업을 선택합니다. 직업에 따라 매일 급여나 혜택을 받아요."
     )
     @app_commands.describe(직업="선택할 직업")
     @app_commands.choices(
@@ -138,13 +149,16 @@ class Economy(commands.Cog):
         ]
     )
     async def get_job(self, interaction: discord.Interaction, 직업: app_commands.Choice[str]):
+        guild_id = await require_guild(interaction)
+        if guild_id is None:
+            return
         user_id = str(interaction.user.id)
-        with get_db() as conn:
+        with get_db(guild_id) as conn:
             economy.set_job(conn, user_id, 직업.value)
         await interaction.response.send_message(
             f"{economy.JOB_EMOJI[직업.value]} {interaction.user.display_name}님이 "
             f"**{직업.value}**(으)로 취직했어요! ({economy.JOB_DESCRIPTION[직업.value]})\n"
-            "매일 한국시간 오전 7시에 급여가 지급돼요.",
+            f"{economy.job_benefit_note(직업.value)}",
             ephemeral=True,
         )
 
@@ -156,6 +170,9 @@ class Economy(commands.Cog):
         대상: discord.Member,
         금액: app_commands.Range[int, 1],
     ):
+        guild_id = await require_guild(interaction)
+        if guild_id is None:
+            return
         if 대상.id == interaction.user.id:
             await interaction.response.send_message("자기 자신에게는 기부할 수 없어요.", ephemeral=True)
             return
@@ -165,7 +182,7 @@ class Economy(commands.Cog):
 
         sender_id = str(interaction.user.id)
         receiver_id = str(대상.id)
-        with get_db() as conn:
+        with get_db(guild_id) as conn:
             sender_balance = economy.ensure_wallet(conn, sender_id)
             if 금액 > sender_balance:
                 await interaction.response.send_message(
@@ -191,8 +208,11 @@ class Economy(commands.Cog):
     async def grant_money(
         self, interaction: discord.Interaction, 대상: discord.Member, 금액: int
     ):
+        guild_id = await require_guild(interaction)
+        if guild_id is None:
+            return
         user_id = str(대상.id)
-        with get_db() as conn:
+        with get_db(guild_id) as conn:
             balance = economy.ensure_wallet(conn, user_id)
             new_balance = balance + 금액
             economy.set_balance(conn, user_id, new_balance)

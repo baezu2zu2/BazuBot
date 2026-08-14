@@ -4,8 +4,7 @@ import discord
 from discord.ext import commands
 from dotenv import load_dotenv
 
-from bazubot import cards as cards_module
-from bazubot.database import get_db, init_db
+from bazubot.database import init_db
 
 load_dotenv()
 
@@ -21,13 +20,13 @@ class BazuBot(commands.Bot):
         super().__init__(command_prefix="!", intents=intents)
 
     async def setup_hook(self):
-        init_db()
-        with get_db() as conn:
-            cards_module.sync_cards(conn)
-
+        # DB는 서버(길드)마다 하나씩 만들어지며, on_ready에서 초기화한다.
+        # (주식 시세 루프가 첫 명령어를 기다리지 않고 바로 돌게 하려는 목적)
+        await self.load_extension("bazubot.cogs.admin")
         await self.load_extension("bazubot.cogs.collection")
         await self.load_extension("bazubot.cogs.economy")
         await self.load_extension("bazubot.cogs.market")
+        await self.load_extension("bazubot.cogs.stocks")
 
         # Global sync so commands work in every server the bot is invited to
         # (first-time propagation can take up to ~1 hour for Discord to roll out).
@@ -56,7 +55,16 @@ bot = BazuBot()
 
 @bot.event
 async def on_ready():
-    print(f"{bot.user}로 로그인했습니다.")
+    for guild in bot.guilds:
+        init_db(guild.id)
+    print(f"{bot.user}로 로그인했습니다. (서버 {len(bot.guilds)}개, 서버별 DB 사용)")
+
+
+@bot.event
+async def on_guild_join(guild: discord.Guild):
+    # 새로 초대된 서버는 빈 DB에서 새로 시작한다.
+    init_db(guild.id)
+    print(f"새 서버에 초대되어 DB를 만들었습니다: {guild.name} ({guild.id})")
 
 
 def main():

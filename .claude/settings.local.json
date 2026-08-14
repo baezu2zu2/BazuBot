@@ -20,7 +20,10 @@
       "Bash(python -c \"import ast; ast.parse\\(open\\('bazubot/cogs/economy.py', encoding='utf-8'\\).read\\(\\)\\); print\\('OK'\\)\")",
       "WebFetch(domain:namu.wiki)",
       "Bash(python *)",
-      "Bash(curl *)"
+      "Bash(curl *)",
+      "PowerShell(git *)",
+      "PowerShell(if \\(Test-Path .venv\\\\Scripts\\\\python.exe\\) { .\\\\.venv\\\\Scripts\\\\python.exe -V } else { \\(Get-Command py -ErrorAction SilentlyContinue\\).Source; \\(Get-Command python3 -ErrorAction SilentlyContinue\\).Source })",
+      "PowerShell(Get-ChildItem *)"
     ]
   }
 }

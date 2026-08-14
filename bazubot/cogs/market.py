@@ -6,7 +6,7 @@ from .. import cards as cards_module
 from .. import economy
 from .. import market as market_module
 from ..database import get_db
-from ..discord_utils import resolve_display_name
+from ..discord_utils import require_guild, resolve_display_name
 
 
 class Market(commands.Cog):
@@ -14,8 +14,10 @@ class Market(commands.Cog):
         self.bot = bot
 
     async def owned_card_autocomplete(self, interaction: discord.Interaction, current: str):
+        if interaction.guild_id is None:
+            return []
         user_id = str(interaction.user.id)
-        with get_db() as conn:
+        with get_db(interaction.guild_id) as conn:
             rows = conn.execute(
                 """
                 SELECT c.name FROM inventory i
@@ -36,8 +38,11 @@ class Market(commands.Cog):
         카드이름: str,
         수량: app_commands.Range[int, 1] = 1,
     ):
+        guild_id = await require_guild(interaction)
+        if guild_id is None:
+            return
         user_id = str(interaction.user.id)
-        with get_db() as conn:
+        with get_db(guild_id) as conn:
             card = cards_module.get_card_by_name(conn, 카드이름)
             if card is None:
                 await interaction.response.send_message(
@@ -78,8 +83,11 @@ class Market(commands.Cog):
         가격: app_commands.Range[int, 1],
         수량: app_commands.Range[int, 1] = 1,
     ):
+        guild_id = await require_guild(interaction)
+        if guild_id is None:
+            return
         user_id = str(interaction.user.id)
-        with get_db() as conn:
+        with get_db(guild_id) as conn:
             card = cards_module.get_card_by_name(conn, 카드이름)
             if card is None:
                 await interaction.response.send_message(
@@ -109,7 +117,10 @@ class Market(commands.Cog):
 
     @app_commands.command(name="시장목록", description="시장에 올라온 카드 목록을 확인합니다.")
     async def browse(self, interaction: discord.Interaction):
-        with get_db() as conn:
+        guild_id = await require_guild(interaction)
+        if guild_id is None:
+            return
+        with get_db(guild_id) as conn:
             listings = market_module.get_listings(conn)
 
         if not listings:
@@ -142,8 +153,11 @@ class Market(commands.Cog):
         거래번호: int,
         수량: app_commands.Range[int, 1] = 1,
     ):
+        guild_id = await require_guild(interaction)
+        if guild_id is None:
+            return
         buyer_id = str(interaction.user.id)
-        with get_db() as conn:
+        with get_db(guild_id) as conn:
             listing = market_module.get_listing(conn, 거래번호)
             if listing is None:
                 await interaction.response.send_message(
@@ -189,8 +203,11 @@ class Market(commands.Cog):
     @app_commands.command(name="시장취소", description="내가 시장에 올린 거래를 취소합니다.")
     @app_commands.describe(거래번호="취소할 거래 번호")
     async def cancel(self, interaction: discord.Interaction, 거래번호: int):
+        guild_id = await require_guild(interaction)
+        if guild_id is None:
+            return
         user_id = str(interaction.user.id)
-        with get_db() as conn:
+        with get_db(guild_id) as conn:
             listing = market_module.get_listing(conn, 거래번호)
             if listing is None:
                 await interaction.response.send_message(

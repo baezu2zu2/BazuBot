@@ -3,4 +3,6 @@ __pycache__/
 *.pyc
 .env
 bazubot.db
+bazubot.db.migrated
+data/db/
 .claude/worktrees/

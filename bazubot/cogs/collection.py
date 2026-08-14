@@ -8,7 +8,7 @@ from .. import cards as cards_module
 from .. import economy
 from ..checks import is_test_guild
 from ..database import get_db
-from ..discord_utils import resolve_display_name
+from ..discord_utils import require_guild, resolve_display_name
 
 DEX_PAGE_SIZE = 20
 
@@ -89,7 +89,9 @@ class Collection(commands.Cog):
         self.bot = bot
 
     async def category_autocomplete(self, interaction: discord.Interaction, current: str):
-        with get_db() as conn:
+        if interaction.guild_id is None:
+            return []
+        with get_db(interaction.guild_id) as conn:
             categories = cards_module.get_categories(conn)
         return [
             app_commands.Choice(name=category, value=category)
@@ -101,7 +103,10 @@ class Collection(commands.Cog):
     @app_commands.describe(카테고리="확인할 카드 카테고리 (비워두면 전체)")
     @app_commands.autocomplete(카테고리=category_autocomplete)
     async def dex(self, interaction: discord.Interaction, 카테고리: Optional[str] = None):
-        with get_db() as conn:
+        guild_id = await require_guild(interaction)
+        if guild_id is None:
+            return
+        with get_db(guild_id) as conn:
             if 카테고리:
                 categories = cards_module.get_categories(conn)
                 if 카테고리 not in categories:
@@ -129,8 +134,11 @@ class Collection(commands.Cog):
 
     @app_commands.command(name="인벤토리", description="내가 보유한 카드를 확인합니다.")
     async def inventory(self, interaction: discord.Interaction):
+        guild_id = await require_guild(interaction)
+        if guild_id is None:
+            return
         user_id = str(interaction.user.id)
-        with get_db() as conn:
+        with get_db(guild_id) as conn:
             rows = conn.execute(
                 """
                 SELECT c.name, c.rarity, i.quantity
@@ -170,8 +178,11 @@ class Collection(commands.Cog):
 
     @app_commands.command(name="수집률", description="카드 수집률을 확인합니다.")
     async def collection_rate(self, interaction: discord.Interaction):
+        guild_id = await require_guild(interaction)
+        if guild_id is None:
+            return
         user_id = str(interaction.user.id)
-        with get_db() as conn:
+        with get_db(guild_id) as conn:
             all_cards = cards_module.get_all_cards(conn)
             owned_rows = conn.execute(
                 "SELECT DISTINCT card_id FROM inventory WHERE user_id = ? AND quantity > 0",
@@ -214,8 +225,11 @@ class Collection(commands.Cog):
 
     @app_commands.command(name="수집률랭킹", description="카드 수집률 랭킹을 확인합니다.")
     async def collection_leaderboard(self, interaction: discord.Interaction):
+        guild_id = await require_guild(interaction)
+        if guild_id is None:
+            return
         user_id = str(interaction.user.id)
-        with get_db() as conn:
+        with get_db(guild_id) as conn:
             total = len(cards_module.get_all_cards(conn))
             if total == 0:
                 await interaction.response.send_message("등록된 카드가 없어요.", ephemeral=True)
@@ -270,10 +284,15 @@ class Collection(commands.Cog):
     @app_commands.describe(카테고리="뽑을 카드 카테고리 (비워두면 전체에서 랜덤)")
     @app_commands.autocomplete(카테고리=category_autocomplete)
     async def gacha(self, interaction: discord.Interaction, 카테고리: Optional[str] = None):
+        guild_id = await require_guild(interaction)
+        if guild_id is None:
+            return
         user_id = str(interaction.user.id)
-        with get_db() as conn:
+        with get_db(guild_id) as conn:
             balance = economy.ensure_wallet(conn, user_id)
-            if balance < economy.GACHA_COST:
+            is_free = economy.free_card_draws_left(conn, user_id) > 0
+            cost = 0 if is_free else economy.GACHA_COST
+            if balance < cost:
                 await interaction.response.send_message(
                     f"잔액이 부족해요! 필요 금액: {economy.GACHA_COST:,}달러 "
                     f"(현재 잔액: {balance:,}달러)",
@@ -289,32 +308,39 @@ class Collection(commands.Cog):
                     )
                     return
 
-            guild_id = str(interaction.guild_id) if interaction.guild_id else None
-            exclude_ids = (
-                cards_module.get_claimed_unique_card_ids(conn, guild_id) if guild_id else set()
-            )
+            exclude_ids = cards_module.get_claimed_unique_card_ids(conn)
 
             card = cards_module.pick_random_card(conn, 카테고리, exclude_ids)
             if card is None:
                 await interaction.response.send_message("뽑을 수 있는 카드가 없어요.", ephemeral=True)
                 return
 
-            new_balance = balance - economy.GACHA_COST
+            if is_free:
+                economy.use_free_card_draws(conn, user_id)
+            new_balance = balance - cost
             economy.set_balance(conn, user_id, new_balance)
             cards_module.add_card(conn, user_id, card["id"])
 
             is_unique = card["name"] in cards_module.UNIQUE_CARD_NAMES
-            if is_unique and guild_id:
-                cards_module.claim_unique_card(conn, card["id"], guild_id, user_id)
+            if is_unique:
+                cards_module.claim_unique_card(conn, card["id"], user_id)
+
+            free_left = economy.free_card_draws_left(conn, user_id)
 
         emoji = cards_module.RARITY_EMOJI[card["rarity"]]
         label = cards_module.RARITY_LABEL[card["rarity"]]
         unique_note = "\n\n🌟 이 서버에 단 하나뿐인 카드예요!" if is_unique else ""
+        cost_line = (
+            f"{interaction.user.display_name}님이 🃏 **카드 트레이더** 혜택으로 무료 뽑기를 "
+            f"사용했어요! (오늘 남은 무료 뽑기: {free_left}장)"
+            if is_free
+            else f"{interaction.user.display_name}님이 **{economy.GACHA_COST:,}달러**를 사용해 "
+            "카드를 뽑았어요!"
+        )
         embed = discord.Embed(
             title="🎴 카드뽑기 결과",
             description=(
-                f"{interaction.user.display_name}님이 **{economy.GACHA_COST:,}달러**를 사용해 "
-                f"카드를 뽑았어요!\n\n"
+                f"{cost_line}\n\n"
                 f"{emoji} **{label}** — {card['name']} ({card['category']}){unique_note}\n\n"
                 f"잔액: **{new_balance:,}달러**"
             ),
@@ -328,7 +354,10 @@ class Collection(commands.Cog):
     @app_commands.checks.has_permissions(administrator=True)
     @is_test_guild()
     async def grant_card(self, interaction: discord.Interaction, 카드이름: str, 수량: int = 1):
-        with get_db() as conn:
+        guild_id = await require_guild(interaction)
+        if guild_id is None:
+            return
+        with get_db(guild_id) as conn:
             row = conn.execute("SELECT id FROM cards WHERE name = ?", (카드이름,)).fetchone()
             if row is None:
                 await interaction.response.send_message(
@@ -340,7 +369,9 @@ class Collection(commands.Cog):
 
     @grant_card.autocomplete("카드이름")
     async def grant_card_autocomplete(self, interaction: discord.Interaction, current: str):
-        with get_db() as conn:
+        if interaction.guild_id is None:
+            return []
+        with get_db(interaction.guild_id) as conn:
             rows = conn.execute(
                 "SELECT DISTINCT name FROM cards WHERE name LIKE ? LIMIT 25",
                 (f"%{current}%",),

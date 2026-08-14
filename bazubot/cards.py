@@ -78,21 +78,20 @@ def get_all_cards(conn, category: str | None = None) -> list[sqlite3.Row]:
     return sorted(rows, key=lambda r: RARITY_ORDER.index(r["rarity"]))
 
 
-def get_claimed_unique_card_ids(conn, guild_id: str) -> set[int]:
-    rows = conn.execute(
-        "SELECT card_id FROM unique_card_claim WHERE guild_id = ?", (guild_id,)
-    ).fetchall()
+def get_claimed_unique_card_ids(conn) -> set[int]:
+    """DB가 서버별로 분리되어 있으므로 이 서버에서 이미 뽑힌 유니크 카드만 돌려준다."""
+    rows = conn.execute("SELECT card_id FROM unique_card_claim").fetchall()
     return {row["card_id"] for row in rows}
 
 
-def claim_unique_card(conn, card_id: int, guild_id: str, holder_id: str) -> None:
+def claim_unique_card(conn, card_id: int, holder_id: str) -> None:
     conn.execute(
         """
-        INSERT INTO unique_card_claim (card_id, guild_id, holder_id)
-        VALUES (?, ?, ?)
-        ON CONFLICT(card_id, guild_id) DO NOTHING
+        INSERT INTO unique_card_claim (card_id, holder_id)
+        VALUES (?, ?)
+        ON CONFLICT(card_id) DO NOTHING
         """,
-        (card_id, guild_id, holder_id),
+        (card_id, holder_id),
     )
 
 
