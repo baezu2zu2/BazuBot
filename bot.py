@@ -31,7 +31,11 @@ class BazuBot(commands.Bot):
 
         # Global sync so commands work in every server the bot is invited to
         # (first-time propagation can take up to ~1 hour for Discord to roll out).
-        await self.tree.sync()
+        global_synced = await self.tree.sync()
+        print(
+            f"글로벌 동기화: {len(global_synced)}개 커맨드 "
+            f"({', '.join(c.name for c in global_synced)})"
+        )
 
         if DEV_INSTANT_SYNC and GUILD_ID:
             # Opt-in only: also push an instant copy to the dev/test guild so
@@ -40,7 +44,11 @@ class BazuBot(commands.Bot):
             # while this is on, so leave DEV_INSTANT_SYNC unset in production.
             guild = discord.Object(id=int(GUILD_ID))
             self.tree.copy_global_to(guild=guild)
-            await self.tree.sync(guild=guild)
+            guild_synced = await self.tree.sync(guild=guild)
+            print(
+                f"길드({GUILD_ID}) 즉시 동기화: {len(guild_synced)}개 커맨드 "
+                f"({', '.join(c.name for c in guild_synced)})"
+            )
 
 
 bot = BazuBot()
