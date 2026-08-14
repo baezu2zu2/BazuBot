@@ -43,6 +43,43 @@ class Economy(commands.Cog):
             f"💰 {interaction.user.display_name}님의 잔액: **{balance:,}달러**"
         )
 
+    @app_commands.command(name="돈랭킹", description="잔액 랭킹을 확인합니다.")
+    async def money_leaderboard(self, interaction: discord.Interaction):
+        user_id = str(interaction.user.id)
+        with get_db() as conn:
+            rows = conn.execute(
+                "SELECT user_id, balance FROM wallet ORDER BY balance DESC"
+            ).fetchall()
+
+        if not rows:
+            await interaction.response.send_message("아직 잔액 기록이 없어요.", ephemeral=True)
+            return
+
+        medals = {0: "🥇", 1: "🥈", 2: "🥉"}
+        lines = []
+        for i, row in enumerate(rows[:10]):
+            member = interaction.guild.get_member(int(row["user_id"])) if interaction.guild else None
+            name = member.display_name if member else f"유저 {row['user_id']}"
+            rank_label = medals.get(i, f"{i + 1}.")
+            lines.append(f"{rank_label} {name} — {row['balance']:,}달러")
+
+        embed = discord.Embed(
+            title="💰 잔액 랭킹",
+            description="\n".join(lines),
+            color=discord.Color.gold(),
+        )
+
+        my_rank = next((i for i, row in enumerate(rows) if row["user_id"] == user_id), None)
+        if my_rank is not None and my_rank >= 10:
+            embed.set_footer(
+                text=(
+                    f"{interaction.user.display_name}님의 순위: {my_rank + 1}위 "
+                    f"({rows[my_rank]['balance']:,}달러)"
+                )
+            )
+
+        await interaction.response.send_message(embed=embed)
+
     @app_commands.command(
         name="룰렛", description="금액을 걸고 색을 맞추면 2배, 틀리면 전부 잃습니다."
     )
