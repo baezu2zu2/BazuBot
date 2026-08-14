@@ -8,6 +8,7 @@ from .. import cards as cards_module
 from .. import economy
 from ..checks import is_test_guild
 from ..database import get_db
+from ..discord_utils import resolve_display_name
 
 DEX_PAGE_SIZE = 20
 
@@ -239,8 +240,7 @@ class Collection(commands.Cog):
         medals = {0: "🥇", 1: "🥈", 2: "🥉"}
         lines = []
         for i, row in enumerate(rows[:10]):
-            member = interaction.guild.get_member(int(row["user_id"])) if interaction.guild else None
-            name = member.display_name if member else f"유저 {row['user_id']}"
+            name = await resolve_display_name(interaction.guild, row["user_id"])
             percent = row["owned"] / total * 100
             rank_label = medals.get(i, f"{i + 1}.")
             lines.append(f"{rank_label} {name} — {row['owned']:,} / {total:,}장 ({percent:.1f}%)")

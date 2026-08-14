@@ -8,6 +8,7 @@ from discord.ext import commands, tasks
 from .. import economy
 from ..checks import is_test_guild
 from ..database import get_db
+from ..discord_utils import resolve_display_name
 
 KST = ZoneInfo("Asia/Seoul")
 SALARY_TIME = time(hour=7, minute=0, tzinfo=KST)
@@ -58,8 +59,7 @@ class Economy(commands.Cog):
         medals = {0: "🥇", 1: "🥈", 2: "🥉"}
         lines = []
         for i, row in enumerate(rows[:10]):
-            member = interaction.guild.get_member(int(row["user_id"])) if interaction.guild else None
-            name = member.display_name if member else f"유저 {row['user_id']}"
+            name = await resolve_display_name(interaction.guild, row["user_id"])
             rank_label = medals.get(i, f"{i + 1}.")
             lines.append(f"{rank_label} {name} — {row['balance']:,}달러")
 

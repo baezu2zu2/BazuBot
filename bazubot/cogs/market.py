@@ -6,6 +6,7 @@ from .. import cards as cards_module
 from .. import economy
 from .. import market as market_module
 from ..database import get_db
+from ..discord_utils import resolve_display_name
 
 
 class Market(commands.Cog):
@@ -118,10 +119,7 @@ class Market(commands.Cog):
         lines = []
         for listing in listings[:25]:
             emoji = cards_module.RARITY_EMOJI[listing["rarity"]]
-            seller = None
-            if interaction.guild:
-                seller = interaction.guild.get_member(int(listing["seller_id"]))
-            seller_name = seller.display_name if seller else f"유저 {listing['seller_id']}"
+            seller_name = await resolve_display_name(interaction.guild, listing["seller_id"])
             lines.append(
                 f"`#{listing['id']}` {emoji} **{listing['name']}** ×{listing['quantity']} "
                 f"— {listing['price']:,}달러/장 (판매자: {seller_name})"
