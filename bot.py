@@ -11,6 +11,7 @@ load_dotenv()
 
 TOKEN = os.getenv("DISCORD_TOKEN")
 GUILD_ID = os.getenv("GUILD_ID")
+DEV_INSTANT_SYNC = os.getenv("DEV_INSTANT_SYNC") == "1"
 
 intents = discord.Intents.default()
 
@@ -28,16 +29,18 @@ class BazuBot(commands.Bot):
         await self.load_extension("bazubot.cogs.economy")
         await self.load_extension("bazubot.cogs.market")
 
-        if GUILD_ID:
+        # Global sync so commands work in every server the bot is invited to
+        # (first-time propagation can take up to ~1 hour for Discord to roll out).
+        await self.tree.sync()
+
+        if DEV_INSTANT_SYNC and GUILD_ID:
+            # Opt-in only: also push an instant copy to the dev/test guild so
+            # command changes show up immediately while iterating locally.
+            # That guild will show each command twice (global + guild copy)
+            # while this is on, so leave DEV_INSTANT_SYNC unset in production.
             guild = discord.Object(id=int(GUILD_ID))
             self.tree.copy_global_to(guild=guild)
             await self.tree.sync(guild=guild)
-            # Clear any leftover globally-synced commands so they don't show up
-            # duplicated alongside the guild-scoped ones.
-            self.tree.clear_commands(guild=None)
-            await self.tree.sync()
-        else:
-            await self.tree.sync()
 
 
 bot = BazuBot()
