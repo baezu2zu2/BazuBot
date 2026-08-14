@@ -104,7 +104,7 @@ def claim_dividend(conn, user_id: str) -> int:
 def get_holdings(conn, user_id: str) -> list[sqlite3.Row]:
     return conn.execute(
         """
-        SELECT h.stock_name, h.quantity, s.price
+        SELECT h.stock_name, h.quantity, h.total_cost, s.price
         FROM stock_holding h
         JOIN stock s ON s.name = h.stock_name
         WHERE h.user_id = ? AND h.quantity > 0
@@ -112,6 +112,13 @@ def get_holdings(conn, user_id: str) -> list[sqlite3.Row]:
         """,
         (user_id,),
     ).fetchall()
+
+
+def profit_and_rate(value: float, total_cost: float) -> tuple[float, float | None]:
+    """(손익 금액, 수익률 %). 산 적이 없는(전량 무료) 주식은 수익률을 낼 수 없어 None."""
+    profit = value - total_cost
+    rate = profit / total_cost * 100 if total_cost > 0 else None
+    return profit, rate
 
 
 def get_quantity(conn, user_id: str, name: str) -> int:
@@ -122,19 +129,31 @@ def get_quantity(conn, user_id: str, name: str) -> int:
     return row["quantity"] if row else 0
 
 
-def add_holding(conn, user_id: str, name: str, quantity: int) -> None:
+def add_holding(conn, user_id: str, name: str, quantity: int, cost: float = 0) -> None:
+    """cost는 이번 매수에 실제로 쓴 금액. (개미 혜택으로 받은 무료 주식은 0)"""
     conn.execute(
         """
-        INSERT INTO stock_holding (user_id, stock_name, quantity)
-        VALUES (?, ?, ?)
-        ON CONFLICT(user_id, stock_name) DO UPDATE SET quantity = quantity + excluded.quantity
+        INSERT INTO stock_holding (user_id, stock_name, quantity, total_cost)
+        VALUES (?, ?, ?, ?)
+        ON CONFLICT(user_id, stock_name) DO UPDATE SET
+            quantity = quantity + excluded.quantity,
+            total_cost = total_cost + excluded.total_cost
         """,
-        (user_id, name, quantity),
+        (user_id, name, quantity, cost),
     )
 
 
 def remove_holding(conn, user_id: str, name: str, quantity: int) -> None:
+    """평균 단가법: 판 수량만큼 매수 원가도 비례해서 덜어낸다."""
     conn.execute(
-        "UPDATE stock_holding SET quantity = quantity - ? WHERE user_id = ? AND stock_name = ?",
-        (quantity, user_id, name),
+        """
+        UPDATE stock_holding
+        SET total_cost = CASE
+                WHEN quantity - ? <= 0 THEN 0
+                ELSE total_cost * (quantity - ?) / quantity
+            END,
+            quantity = quantity - ?
+        WHERE user_id = ? AND stock_name = ?
+        """,
+        (quantity, quantity, quantity, user_id, name),
     )

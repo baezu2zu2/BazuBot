@@ -134,6 +134,13 @@ def _migrate_schema(conn, guild_id: str) -> None:
         conn.execute("DROP TABLE unique_card_claim")
         conn.execute("ALTER TABLE unique_card_claim_new RENAME TO unique_card_claim")
 
+    # 수익률 표시를 위해 나중에 추가된 컬럼. 기존 보유분은 원가를 모르므로 0으로 시작한다.
+    holding_columns = _column_names(conn, "stock_holding")
+    if holding_columns and "total_cost" not in holding_columns:
+        conn.execute(
+            "ALTER TABLE stock_holding ADD COLUMN total_cost REAL NOT NULL DEFAULT 0"
+        )
+
 
 def _create_tables(conn) -> None:
     conn.execute(
@@ -206,6 +213,8 @@ def _create_tables(conn) -> None:
             user_id TEXT NOT NULL,
             stock_name TEXT NOT NULL REFERENCES stock(name),
             quantity INTEGER NOT NULL DEFAULT 0,
+            -- 수익률 계산용. 지금 들고 있는 수량을 사기 위해 실제로 쓴 금액.
+            total_cost REAL NOT NULL DEFAULT 0,
             PRIMARY KEY (user_id, stock_name)
         )
         """

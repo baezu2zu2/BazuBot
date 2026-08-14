@@ -13,6 +13,28 @@ STOCK_CHOICES = [
 ]
 
 
+def _cost_label(total_cost: float, quantity: int) -> str:
+    if total_cost <= 0:
+        return "무료 획득"
+    return f"평단 {round(total_cost / quantity):,}달러"
+
+
+def _profit_label(profit: float, rate: float | None) -> str:
+    arrow = "🔺" if profit > 0 else "🔻" if profit < 0 else "➖"
+    # 산 적이 없으면(전량 무료) 나눌 원가가 없어 수익률을 못 낸다.
+    if rate is None:
+        return f"{arrow} {round(profit):+,}달러"
+    return f"{arrow} {round(profit):+,}달러 ({rate:+.2f}%)"
+
+
+def _profit_color(profit: float) -> discord.Color:
+    if profit > 0:
+        return discord.Color.red()
+    if profit < 0:
+        return discord.Color.blue()
+    return discord.Color.greyple()
+
+
 class Stocks(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
@@ -104,7 +126,7 @@ class Stocks(commands.Cog):
             economy.use_free_stock_buys(conn, user_id, free)
             new_balance = balance - total
             economy.set_balance(conn, user_id, new_balance)
-            stocks_module.add_holding(conn, user_id, 종목.value, 수량)
+            stocks_module.add_holding(conn, user_id, 종목.value, 수량, total)
             owned = stocks_module.get_quantity(conn, user_id, 종목.value)
             free_left = economy.free_stock_buys_left(conn, user_id)
 
@@ -175,20 +197,31 @@ class Stocks(commands.Cog):
             )
             return
 
-        lines = [
-            f"{stocks_module.STOCK_EMOJI[row['stock_name']]} **{row['stock_name']}** "
-            f"×{row['quantity']:,} — {row['price'] * row['quantity']:,}달러 "
-            f"(주당 {row['price']:,}달러)"
-            for row in holdings
-        ]
-        total = sum(row["price"] * row["quantity"] for row in holdings)
+        lines = []
+        for row in holdings:
+            value = row["price"] * row["quantity"]
+            profit, rate = stocks_module.profit_and_rate(value, row["total_cost"])
+            cost_label = _cost_label(row["total_cost"], row["quantity"])
+            lines.append(
+                f"{stocks_module.STOCK_EMOJI[row['stock_name']]} **{row['stock_name']}** "
+                f"×{row['quantity']:,} — {value:,}달러 (주당 {row['price']:,}달러)\n"
+                f"└ {cost_label} · {_profit_label(profit, rate)}"
+            )
+
+        total_value = sum(row["price"] * row["quantity"] for row in holdings)
+        total_cost = sum(row["total_cost"] for row in holdings)
+        total_profit, total_rate = stocks_module.profit_and_rate(total_value, total_cost)
 
         embed = discord.Embed(
             title=f"📊 {interaction.user.display_name}님의 주식",
             description="\n".join(lines),
-            color=discord.Color.blue(),
+            color=_profit_color(total_profit),
         )
-        embed.add_field(name="평가 금액", value=f"{total:,}달러", inline=True)
+        embed.add_field(name="평가 금액", value=f"{total_value:,}달러", inline=True)
+        embed.add_field(name="매수 금액", value=f"{round(total_cost):,}달러", inline=True)
+        embed.add_field(
+            name="총 수익률", value=_profit_label(total_profit, total_rate), inline=True
+        )
         embed.add_field(name="쌓인 배당금", value=f"{accrued:.4f}달러", inline=True)
         embed.set_footer(text="/배당금 으로 쌓인 배당금을 받을 수 있어요.")
         await interaction.response.send_message(embed=embed)
