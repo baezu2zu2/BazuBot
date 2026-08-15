@@ -33,10 +33,10 @@ RARITY_PRICE = {
 
 UNIQUE_CARD_NAMES = {"드래곤 알", "명령 블록", "반복형 명령 블록", "연쇄형 명령 블록"}
 
-# 카드 판매가는 1분마다 -50~50달러만큼 움직인다. (희귀도 단위)
+# 카드 판매가는 1분마다 -50~51달러만큼 움직인다. (희귀도 단위)
 CARD_TICK_MINUTES = 1
 CARD_DELTA_MIN = -50
-CARD_DELTA_MAX = 50
+CARD_DELTA_MAX = 51
 
 
 def sync_card_prices(conn) -> None:
