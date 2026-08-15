@@ -5,6 +5,7 @@ import discord
 from discord import app_commands
 from discord.ext import commands, tasks
 
+from .. import assets as assets_module
 from .. import economy
 from .. import stocks as stocks_module
 from ..checks import is_test_guild
@@ -49,6 +50,68 @@ class Economy(commands.Cog):
         await interaction.response.send_message(
             f"💰 {interaction.user.display_name}님의 잔액: **{balance:,}달러**"
         )
+
+    @app_commands.command(name="자산", description="잔액·주식·카드를 합친 총자산을 확인합니다.")
+    async def net_worth(self, interaction: discord.Interaction):
+        guild_id = await require_guild(interaction)
+        if guild_id is None:
+            return
+        user_id = str(interaction.user.id)
+        with get_db(guild_id) as conn:
+            economy.ensure_wallet(conn, user_id)
+            assets = assets_module.get_assets(conn, user_id)
+
+        embed = discord.Embed(
+            title=f"🏦 {interaction.user.display_name}님의 자산",
+            description=f"총자산 **{assets.total:,}달러**",
+            color=discord.Color.gold(),
+        )
+        embed.add_field(name="💰 잔액", value=f"{assets.balance:,}달러", inline=True)
+        embed.add_field(name="📈 주식", value=f"{assets.stocks:,}달러", inline=True)
+        embed.add_field(name="🎴 카드", value=f"{assets.cards:,}달러", inline=True)
+        embed.set_footer(text="주식은 현재 시세, 카드는 판매가 기준이에요.")
+        await interaction.response.send_message(embed=embed)
+
+    @app_commands.command(name="자산랭킹", description="총자산 랭킹을 확인합니다.")
+    async def asset_leaderboard(self, interaction: discord.Interaction):
+        guild_id = await require_guild(interaction)
+        if guild_id is None:
+            return
+        user_id = str(interaction.user.id)
+        with get_db(guild_id) as conn:
+            economy.ensure_wallet(conn, user_id)
+            rows = assets_module.all_assets(conn)
+
+        if not rows:
+            await interaction.response.send_message("아직 자산 기록이 없어요.", ephemeral=True)
+            return
+
+        medals = {0: "🥇", 1: "🥈", 2: "🥉"}
+        lines = []
+        for i, row in enumerate(rows[:10]):
+            name = await resolve_display_name(interaction.guild, row.user_id)
+            rank_label = medals.get(i, f"{i + 1}.")
+            lines.append(
+                f"{rank_label} {name} — **{row.total:,}달러**\n"
+                f"└ 💰 {row.balance:,} · 📈 {row.stocks:,} · 🎴 {row.cards:,}"
+            )
+
+        embed = discord.Embed(
+            title="🏦 자산 랭킹",
+            description="\n".join(lines),
+            color=discord.Color.gold(),
+        )
+
+        my_rank = next((i for i, row in enumerate(rows) if row.user_id == user_id), None)
+        if my_rank is not None and my_rank >= 10:
+            embed.set_footer(
+                text=(
+                    f"{interaction.user.display_name}님의 순위: {my_rank + 1}위 "
+                    f"({rows[my_rank].total:,}달러)"
+                )
+            )
+
+        await interaction.response.send_message(embed=embed)
 
     @app_commands.command(name="돈랭킹", description="잔액 랭킹을 확인합니다.")
     async def money_leaderboard(self, interaction: discord.Interaction):
