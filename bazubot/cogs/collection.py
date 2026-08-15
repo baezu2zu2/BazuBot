@@ -1,3 +1,4 @@
+from datetime import time
 from typing import Optional
 
 import discord
@@ -11,6 +12,12 @@ from ..database import existing_guild_ids, get_db
 from ..discord_utils import require_guild, resolve_display_name
 
 DEX_PAGE_SIZE = 20
+
+# 한국시간 0시부터 2시간 간격. 봇을 재시작해도 리셋 시각이 밀리지 않는다.
+CARD_RESET_TIMES = [
+    time(hour=hour, tzinfo=economy.KST)
+    for hour in range(0, 24, cards_module.CARD_RESET_HOURS)
+]
 
 
 class DexView(discord.ui.View):
@@ -88,9 +95,11 @@ class Collection(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
         self.card_price_tick.start()
+        self.card_price_reset.start()
 
     def cog_unload(self):
         self.card_price_tick.cancel()
+        self.card_price_reset.cancel()
 
     @tasks.loop(minutes=cards_module.CARD_TICK_MINUTES)
     async def card_price_tick(self):
@@ -108,6 +117,18 @@ class Collection(commands.Cog):
 
     @card_price_tick.before_loop
     async def before_card_price_tick(self):
+        await self.bot.wait_until_ready()
+
+    @tasks.loop(time=CARD_RESET_TIMES)
+    async def card_price_reset(self):
+        # 2시간마다 기본가로 되돌려서 시세가 한없이 흘러가지 않게 한다.
+        for guild_id in existing_guild_ids():
+            with get_db(guild_id) as conn:
+                cards_module.reset_card_prices(conn)
+        print("카드 가격을 기본가로 초기화했습니다.")
+
+    @card_price_reset.before_loop
+    async def before_card_price_reset(self):
         await self.bot.wait_until_ready()
 
     async def category_autocomplete(self, interaction: discord.Interaction, current: str):
@@ -181,7 +202,8 @@ class Collection(commands.Cog):
         embed.set_footer(
             text=(
                 f"{cards_module.CARD_TICK_MINUTES}분마다 "
-                f"{cards_module.CARD_DELTA_MIN}~{cards_module.CARD_DELTA_MAX}달러씩 변동돼요. "
+                f"{cards_module.CARD_DELTA_MIN}~{cards_module.CARD_DELTA_MAX}달러씩 변동하고, "
+                f"{cards_module.CARD_RESET_HOURS}시간마다 기본가로 초기화돼요. "
                 "/판매 는 이 가격으로 정산됩니다."
             )
         )
