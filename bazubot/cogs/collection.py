@@ -13,7 +13,7 @@ from ..discord_utils import require_guild, resolve_display_name
 
 DEX_PAGE_SIZE = 20
 
-# 한국시간 0시부터 2시간 간격. 봇을 재시작해도 리셋 시각이 밀리지 않는다.
+# 한국시간 0시부터 1시간 간격. 봇을 재시작해도 리셋 시각이 밀리지 않는다.
 CARD_RESET_TIMES = [
     time(hour=hour, tzinfo=economy.KST)
     for hour in range(0, 24, cards_module.CARD_RESET_HOURS)
@@ -121,7 +121,7 @@ class Collection(commands.Cog):
 
     @tasks.loop(time=CARD_RESET_TIMES)
     async def card_price_reset(self):
-        # 2시간마다 기본가로 되돌려서 시세가 한없이 흘러가지 않게 한다.
+        # 1시간마다 기본가로 되돌려서 시세가 한없이 흘러가지 않게 한다.
         for guild_id in existing_guild_ids():
             with get_db(guild_id) as conn:
                 cards_module.reset_card_prices(conn)
