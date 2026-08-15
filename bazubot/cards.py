@@ -33,10 +33,10 @@ RARITY_PRICE = {
 
 UNIQUE_CARD_NAMES = {"드래곤 알", "명령 블록", "반복형 명령 블록", "연쇄형 명령 블록"}
 
-# 카드 판매가는 1분마다 -50~51달러만큼 움직이고, 1시간마다 기본가로 돌아간다. (희귀도 단위)
+# 카드 판매가는 1분마다 -20~20달러만큼 움직이고, 1시간마다 기본가로 돌아간다. (희귀도 단위)
 CARD_TICK_MINUTES = 1
-CARD_DELTA_MIN = -50
-CARD_DELTA_MAX = 51
+CARD_DELTA_MIN = -20
+CARD_DELTA_MAX = 20
 CARD_RESET_HOURS = 1
 
 
