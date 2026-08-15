@@ -13,10 +13,12 @@ from ..discord_utils import require_guild, resolve_display_name
 
 DEX_PAGE_SIZE = 20
 
-# 한국시간 0시부터 1시간 간격. 봇을 재시작해도 리셋 시각이 밀리지 않는다.
+# 한국시간 매시 0분부터 10분 간격(:00, :10, ... :50).
+# 절대 시각 기준이라 봇을 재시작해도 리셋 시점이 밀리지 않는다.
 CARD_RESET_TIMES = [
-    time(hour=hour, tzinfo=economy.KST)
-    for hour in range(0, 24, cards_module.CARD_RESET_HOURS)
+    time(hour=hour, minute=minute, tzinfo=economy.KST)
+    for hour in range(24)
+    for minute in range(0, 60, cards_module.CARD_RESET_MINUTES)
 ]
 
 
@@ -121,7 +123,7 @@ class Collection(commands.Cog):
 
     @tasks.loop(time=CARD_RESET_TIMES)
     async def card_price_reset(self):
-        # 1시간마다 기본가로 되돌려서 시세가 한없이 흘러가지 않게 한다.
+        # 10분마다 기본가로 되돌려서 시세가 한없이 흘러가지 않게 한다.
         for guild_id in existing_guild_ids():
             with get_db(guild_id) as conn:
                 cards_module.reset_card_prices(conn)
@@ -203,7 +205,7 @@ class Collection(commands.Cog):
             text=(
                 f"{cards_module.CARD_TICK_MINUTES}분마다 "
                 f"{cards_module.CARD_DELTA_MIN}~{cards_module.CARD_DELTA_MAX}달러씩 변동하고, "
-                f"{cards_module.CARD_RESET_HOURS}시간마다 기본가로 초기화돼요. "
+                f"{cards_module.CARD_RESET_MINUTES}분마다 기본가로 초기화돼요. "
                 "/판매 는 이 가격으로 정산됩니다."
             )
         )
