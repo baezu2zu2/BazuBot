@@ -57,7 +57,7 @@ class Market(commands.Cog):
                 )
                 return
 
-            price = cards_module.get_card_price(conn, card["rarity"])
+            price = cards_module.RARITY_PRICE[card["rarity"]]
             total = price * 수량
             cards_module.remove_card(conn, user_id, card["id"], 수량)
             balance = economy.ensure_wallet(conn, user_id)

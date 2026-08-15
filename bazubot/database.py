@@ -94,7 +94,6 @@ def _ensure_initialized(guild_id: str) -> None:
         _migrate_schema(conn, guild_id)
         _create_tables(conn)
         cards_module.sync_cards(conn)
-        cards_module.sync_card_prices(conn)
         stocks_module.sync_stocks(conn)
         conn.commit()
     finally:
@@ -148,12 +147,8 @@ def _migrate_schema(conn, guild_id: str) -> None:
     if job_columns and "last_changed" not in job_columns:
         conn.execute("ALTER TABLE job ADD COLUMN last_changed TEXT NOT NULL DEFAULT ''")
 
-    # /카드시세의 등락 표시를 위해 나중에 추가된 컬럼.
-    card_price_columns = _column_names(conn, "card_price")
-    if card_price_columns and "prev_price" not in card_price_columns:
-        conn.execute("ALTER TABLE card_price ADD COLUMN prev_price INTEGER NOT NULL DEFAULT 0")
-        # 0으로 두면 첫 등락이 현재가 전체로 잡히니 현재가로 맞춰 둔다.
-        conn.execute("UPDATE card_price SET prev_price = price")
+    # 카드 시세 변동 기능을 없애면서 쓰지 않게 된 테이블. (카드값은 다시 희귀도별 고정가)
+    conn.execute("DROP TABLE IF EXISTS card_price")
 
     # 사업가 명의 주식을 지원하면서 추가된 컬럼.
     stock_columns = _column_names(conn, "stock")
@@ -228,18 +223,6 @@ def _create_tables(conn) -> None:
     )
     conn.execute(
         """
-        CREATE TABLE IF NOT EXISTS card_price (
-            rarity TEXT PRIMARY KEY,
-            price INTEGER NOT NULL,
-            -- 직전 틱의 가격. /카드시세의 등락 표시에 쓴다.
-            prev_price INTEGER NOT NULL,
-            -- 0달러 이하로 떨어졌을 때 되돌아갈 가격.
-            base_price INTEGER NOT NULL
-        )
-        """
-    )
-    conn.execute(
-        """
         CREATE TABLE IF NOT EXISTS stock (
             name TEXT PRIMARY KEY,
             price INTEGER NOT NULL,
@@ -289,11 +272,10 @@ def init_db(guild_id: str | int) -> None:
 
 
 def reset_guild_db(guild_id: str | int) -> None:
-    """해당 서버의 유저 데이터를 전부 지우고 주식·카드 시세를 기본값으로 되돌린다."""
+    """해당 서버의 유저 데이터를 전부 지우고 주식 시세를 기본값으로 되돌린다."""
     guild_id = str(guild_id)
     _ensure_initialized(guild_id)
 
-    from . import cards as cards_module
     from . import stocks as stocks_module
 
     conn = _connect(guild_id)
@@ -301,14 +283,12 @@ def reset_guild_db(guild_id: str | int) -> None:
         for table in USER_DATA_TABLES:
             conn.execute(f"DELETE FROM {table}")
         conn.execute("DELETE FROM stock")
-        conn.execute("DELETE FROM card_price")
         # 시장 거래 번호도 1번부터 다시 시작하게 한다.
         has_sequence = conn.execute(
             "SELECT 1 FROM sqlite_master WHERE type = 'table' AND name = 'sqlite_sequence'"
         ).fetchone()
         if has_sequence:
             conn.execute("DELETE FROM sqlite_sequence WHERE name = 'market'")
-        cards_module.sync_card_prices(conn)
         stocks_module.sync_stocks(conn)
         conn.commit()
     finally:

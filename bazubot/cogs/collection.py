@@ -1,25 +1,16 @@
-from datetime import time
 from typing import Optional
 
 import discord
 from discord import app_commands
-from discord.ext import commands, tasks
+from discord.ext import commands
 
 from .. import cards as cards_module
 from .. import economy
 from ..checks import is_test_guild
-from ..database import existing_guild_ids, get_db
+from ..database import get_db
 from ..discord_utils import require_guild, resolve_display_name
 
 DEX_PAGE_SIZE = 20
-
-# 한국시간 매시 0분부터 10분 간격(:00, :10, ... :50).
-# 절대 시각 기준이라 봇을 재시작해도 리셋 시점이 밀리지 않는다.
-CARD_RESET_TIMES = [
-    time(hour=hour, minute=minute, tzinfo=economy.KST)
-    for hour in range(24)
-    for minute in range(0, 60, cards_module.CARD_RESET_MINUTES)
-]
 
 
 class DexView(discord.ui.View):
@@ -96,42 +87,6 @@ class DexView(discord.ui.View):
 class Collection(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
-        self.card_price_tick.start()
-        self.card_price_reset.start()
-
-    def cog_unload(self):
-        self.card_price_tick.cancel()
-        self.card_price_reset.cancel()
-
-    @tasks.loop(minutes=cards_module.CARD_TICK_MINUTES)
-    async def card_price_tick(self):
-        # tasks.loop은 시작하자마자 한 번 도는데, 그러면 봇을 재시작할 때마다
-        # 가격이 움직여 버린다. 첫 바퀴는 건너뛰고 1분 뒤부터 변동시킨다.
-        if self.card_price_tick.current_loop == 0:
-            return
-
-        # 카드 판매가는 서버 DB마다 따로 움직인다.
-        for guild_id in existing_guild_ids():
-            with get_db(guild_id) as conn:
-                for rarity in cards_module.tick_card_prices(conn):
-                    label = cards_module.RARITY_LABEL[rarity]
-                    print(f"[{guild_id}] {label} 카드 가격이 0달러 이하로 떨어져 초기화되었습니다.")
-
-    @card_price_tick.before_loop
-    async def before_card_price_tick(self):
-        await self.bot.wait_until_ready()
-
-    @tasks.loop(time=CARD_RESET_TIMES)
-    async def card_price_reset(self):
-        # 10분마다 기본가로 되돌려서 시세가 한없이 흘러가지 않게 한다.
-        for guild_id in existing_guild_ids():
-            with get_db(guild_id) as conn:
-                cards_module.reset_card_prices(conn)
-        print("카드 가격을 기본가로 초기화했습니다.")
-
-    @card_price_reset.before_loop
-    async def before_card_price_reset(self):
-        await self.bot.wait_until_ready()
 
     async def category_autocomplete(self, interaction: discord.Interaction, current: str):
         if interaction.guild_id is None:
@@ -177,40 +132,6 @@ class Collection(commands.Cog):
         view = DexView(rarities, pages, owned_ids, interaction.user.id, 카테고리)
         await interaction.response.send_message(embed=view.build_embed(), view=view)
 
-    @app_commands.command(name="카드시세", description="등급별 카드 판매가를 확인합니다.")
-    async def card_prices(self, interaction: discord.Interaction):
-        guild_id = await require_guild(interaction)
-        if guild_id is None:
-            return
-        with get_db(guild_id) as conn:
-            rows = cards_module.get_card_price_rows(conn)
-
-        lines = []
-        for row in rows:
-            delta = row["price"] - row["prev_price"]
-            arrow = "🔺" if delta > 0 else "🔻" if delta < 0 else "➖"
-            lines.append(
-                f"{cards_module.RARITY_EMOJI[row['rarity']]} "
-                f"**{cards_module.RARITY_LABEL[row['rarity']]}** — "
-                f"{row['price']:,}달러 {arrow} {delta:+,} "
-                f"(기본가 {row['base_price']:,})"
-            )
-
-        embed = discord.Embed(
-            title="🎴 카드 시세",
-            description="\n".join(lines),
-            color=discord.Color.green(),
-        )
-        embed.set_footer(
-            text=(
-                f"{cards_module.CARD_TICK_MINUTES}분마다 "
-                f"{cards_module.CARD_DELTA_MIN}~{cards_module.CARD_DELTA_MAX}달러씩 변동하고, "
-                f"{cards_module.CARD_RESET_MINUTES}분마다 기본가로 초기화돼요. "
-                "/판매 는 이 가격으로 정산됩니다."
-            )
-        )
-        await interaction.response.send_message(embed=embed)
-
     @app_commands.command(name="인벤토리", description="내가 보유한 카드를 확인합니다.")
     async def inventory(self, interaction: discord.Interaction):
         guild_id = await require_guild(interaction)
@@ -227,7 +148,6 @@ class Collection(commands.Cog):
                 """,
                 (user_id,),
             ).fetchall()
-            prices = cards_module.get_card_prices(conn)
 
         if not rows:
             await interaction.response.send_message(
@@ -249,12 +169,8 @@ class Collection(commands.Cog):
             if not cards_in_rarity:
                 continue
             lines = [f"{c['name']} ×{c['quantity']}" for c in cards_in_rarity]
-            price = prices.get(rarity, cards_module.RARITY_PRICE[rarity])
             embed.add_field(
-                name=(
-                    f"{cards_module.RARITY_EMOJI[rarity]} "
-                    f"{cards_module.RARITY_LABEL[rarity]} (장당 {price:,}달러)"
-                ),
+                name=f"{cards_module.RARITY_EMOJI[rarity]} {cards_module.RARITY_LABEL[rarity]}",
                 value="\n".join(lines),
                 inline=False,
             )
