@@ -42,10 +42,16 @@ CARD_DELTA_MAX = 51
 def sync_card_prices(conn) -> None:
     for rarity, price in RARITY_PRICE.items():
         conn.execute(
-            "INSERT INTO card_price (rarity, price, base_price) VALUES (?, ?, ?) "
+            "INSERT INTO card_price (rarity, price, prev_price, base_price) VALUES (?, ?, ?, ?) "
             "ON CONFLICT(rarity) DO NOTHING",
-            (rarity, price, price),
+            (rarity, price, price, price),
         )
+
+
+def get_card_price_rows(conn) -> list[sqlite3.Row]:
+    """희귀도 순서대로 카드 시세를 돌려줍니다."""
+    rows = conn.execute("SELECT * FROM card_price").fetchall()
+    return sorted(rows, key=lambda row: RARITY_ORDER.index(row["rarity"]))
 
 
 def get_card_prices(conn) -> dict[str, int]:
@@ -68,7 +74,8 @@ def tick_card_prices(conn) -> list[str]:
             new_price = row["base_price"]
             reset.append(row["rarity"])
         conn.execute(
-            "UPDATE card_price SET price = ? WHERE rarity = ?", (new_price, row["rarity"])
+            "UPDATE card_price SET price = ?, prev_price = ? WHERE rarity = ?",
+            (new_price, row["price"], row["rarity"]),
         )
     return reset
 

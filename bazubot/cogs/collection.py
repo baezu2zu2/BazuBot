@@ -154,6 +154,39 @@ class Collection(commands.Cog):
         view = DexView(rarities, pages, owned_ids, interaction.user.id, 카테고리)
         await interaction.response.send_message(embed=view.build_embed(), view=view)
 
+    @app_commands.command(name="카드시세", description="등급별 카드 판매가를 확인합니다.")
+    async def card_prices(self, interaction: discord.Interaction):
+        guild_id = await require_guild(interaction)
+        if guild_id is None:
+            return
+        with get_db(guild_id) as conn:
+            rows = cards_module.get_card_price_rows(conn)
+
+        lines = []
+        for row in rows:
+            delta = row["price"] - row["prev_price"]
+            arrow = "🔺" if delta > 0 else "🔻" if delta < 0 else "➖"
+            lines.append(
+                f"{cards_module.RARITY_EMOJI[row['rarity']]} "
+                f"**{cards_module.RARITY_LABEL[row['rarity']]}** — "
+                f"{row['price']:,}달러 {arrow} {delta:+,} "
+                f"(기본가 {row['base_price']:,})"
+            )
+
+        embed = discord.Embed(
+            title="🎴 카드 시세",
+            description="\n".join(lines),
+            color=discord.Color.green(),
+        )
+        embed.set_footer(
+            text=(
+                f"{cards_module.CARD_TICK_MINUTES}분마다 "
+                f"{cards_module.CARD_DELTA_MIN}~{cards_module.CARD_DELTA_MAX}달러씩 변동돼요. "
+                "/판매 는 이 가격으로 정산됩니다."
+            )
+        )
+        await interaction.response.send_message(embed=embed)
+
     @app_commands.command(name="인벤토리", description="내가 보유한 카드를 확인합니다.")
     async def inventory(self, interaction: discord.Interaction):
         guild_id = await require_guild(interaction)

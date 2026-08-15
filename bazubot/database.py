@@ -148,6 +148,13 @@ def _migrate_schema(conn, guild_id: str) -> None:
     if job_columns and "last_changed" not in job_columns:
         conn.execute("ALTER TABLE job ADD COLUMN last_changed TEXT NOT NULL DEFAULT ''")
 
+    # /카드시세의 등락 표시를 위해 나중에 추가된 컬럼.
+    card_price_columns = _column_names(conn, "card_price")
+    if card_price_columns and "prev_price" not in card_price_columns:
+        conn.execute("ALTER TABLE card_price ADD COLUMN prev_price INTEGER NOT NULL DEFAULT 0")
+        # 0으로 두면 첫 등락이 현재가 전체로 잡히니 현재가로 맞춰 둔다.
+        conn.execute("UPDATE card_price SET prev_price = price")
+
     # 사업가 명의 주식을 지원하면서 추가된 컬럼.
     stock_columns = _column_names(conn, "stock")
     if stock_columns and "base_price" not in stock_columns:
@@ -224,6 +231,8 @@ def _create_tables(conn) -> None:
         CREATE TABLE IF NOT EXISTS card_price (
             rarity TEXT PRIMARY KEY,
             price INTEGER NOT NULL,
+            -- 직전 틱의 가격. /카드시세의 등락 표시에 쓴다.
+            prev_price INTEGER NOT NULL,
             -- 0달러 이하로 떨어졌을 때 되돌아갈 가격.
             base_price INTEGER NOT NULL
         )
