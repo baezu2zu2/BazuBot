@@ -33,6 +33,45 @@ RARITY_PRICE = {
 
 UNIQUE_CARD_NAMES = {"드래곤 알", "명령 블록", "반복형 명령 블록", "연쇄형 명령 블록"}
 
+# 카드 판매가는 1분마다 -50~50달러만큼 움직인다. (희귀도 단위)
+CARD_TICK_MINUTES = 1
+CARD_DELTA_MIN = -50
+CARD_DELTA_MAX = 50
+
+
+def sync_card_prices(conn) -> None:
+    for rarity, price in RARITY_PRICE.items():
+        conn.execute(
+            "INSERT INTO card_price (rarity, price, base_price) VALUES (?, ?, ?) "
+            "ON CONFLICT(rarity) DO NOTHING",
+            (rarity, price, price),
+        )
+
+
+def get_card_prices(conn) -> dict[str, int]:
+    rows = conn.execute("SELECT rarity, price FROM card_price").fetchall()
+    return {row["rarity"]: row["price"] for row in rows}
+
+
+def get_card_price(conn, rarity: str) -> int:
+    row = conn.execute("SELECT price FROM card_price WHERE rarity = ?", (rarity,)).fetchone()
+    return row["price"] if row else RARITY_PRICE[rarity]
+
+
+def tick_card_prices(conn) -> list[str]:
+    """카드 가격을 한 번 변동시키고, 0 이하로 떨어져 초기화된 희귀도를 돌려줍니다."""
+    reset = []
+    for row in conn.execute("SELECT rarity, price, base_price FROM card_price").fetchall():
+        new_price = row["price"] + random.randint(CARD_DELTA_MIN, CARD_DELTA_MAX)
+        if new_price <= 0:
+            # 주식과 같은 규칙: 0달러 이하로 떨어지면 기본가로 되돌린다.
+            new_price = row["base_price"]
+            reset.append(row["rarity"])
+        conn.execute(
+            "UPDATE card_price SET price = ? WHERE rarity = ?", (new_price, row["rarity"])
+        )
+    return reset
+
 
 def load_card_files() -> list[dict]:
     parsed = []

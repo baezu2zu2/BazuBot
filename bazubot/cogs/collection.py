@@ -2,12 +2,12 @@ from typing import Optional
 
 import discord
 from discord import app_commands
-from discord.ext import commands
+from discord.ext import commands, tasks
 
 from .. import cards as cards_module
 from .. import economy
 from ..checks import is_test_guild
-from ..database import get_db
+from ..database import existing_guild_ids, get_db
 from ..discord_utils import require_guild, resolve_display_name
 
 DEX_PAGE_SIZE = 20
@@ -87,6 +87,28 @@ class DexView(discord.ui.View):
 class Collection(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
+        self.card_price_tick.start()
+
+    def cog_unload(self):
+        self.card_price_tick.cancel()
+
+    @tasks.loop(minutes=cards_module.CARD_TICK_MINUTES)
+    async def card_price_tick(self):
+        # tasks.loop은 시작하자마자 한 번 도는데, 그러면 봇을 재시작할 때마다
+        # 가격이 움직여 버린다. 첫 바퀴는 건너뛰고 1분 뒤부터 변동시킨다.
+        if self.card_price_tick.current_loop == 0:
+            return
+
+        # 카드 판매가는 서버 DB마다 따로 움직인다.
+        for guild_id in existing_guild_ids():
+            with get_db(guild_id) as conn:
+                for rarity in cards_module.tick_card_prices(conn):
+                    label = cards_module.RARITY_LABEL[rarity]
+                    print(f"[{guild_id}] {label} 카드 가격이 0달러 이하로 떨어져 초기화되었습니다.")
+
+    @card_price_tick.before_loop
+    async def before_card_price_tick(self):
+        await self.bot.wait_until_ready()
 
     async def category_autocomplete(self, interaction: discord.Interaction, current: str):
         if interaction.guild_id is None:
@@ -148,6 +170,7 @@ class Collection(commands.Cog):
                 """,
                 (user_id,),
             ).fetchall()
+            prices = cards_module.get_card_prices(conn)
 
         if not rows:
             await interaction.response.send_message(
@@ -169,8 +192,12 @@ class Collection(commands.Cog):
             if not cards_in_rarity:
                 continue
             lines = [f"{c['name']} ×{c['quantity']}" for c in cards_in_rarity]
+            price = prices.get(rarity, cards_module.RARITY_PRICE[rarity])
             embed.add_field(
-                name=f"{cards_module.RARITY_EMOJI[rarity]} {cards_module.RARITY_LABEL[rarity]}",
+                name=(
+                    f"{cards_module.RARITY_EMOJI[rarity]} "
+                    f"{cards_module.RARITY_LABEL[rarity]} (장당 {price:,}달러)"
+                ),
                 value="\n".join(lines),
                 inline=False,
             )

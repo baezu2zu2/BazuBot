@@ -14,20 +14,20 @@ class Assets(NamedTuple):
         return self.balance + self.stocks + self.cards
 
 
-def _rarity_price_case(column: str) -> str:
-    """희귀도를 판매가로 바꾸는 SQL CASE 식.
+def _rarity_price_case(conn, column: str) -> str:
+    """희귀도를 현재 판매가로 바꾸는 SQL CASE 식.
 
-    희귀도 값은 코드 안의 상수라서 문자열로 끼워 넣어도 안전하다.
+    카드 가격은 1시간마다 변하므로 상수가 아니라 DB의 현재가를 읽는다.
+    희귀도와 가격 모두 코드/DB 안의 값이라 문자열로 끼워 넣어도 안전하다.
     """
-    whens = " ".join(
-        f"WHEN '{rarity}' THEN {price}" for rarity, price in cards_module.RARITY_PRICE.items()
-    )
+    prices = cards_module.get_card_prices(conn) or cards_module.RARITY_PRICE
+    whens = " ".join(f"WHEN '{rarity}' THEN {int(price)}" for rarity, price in prices.items())
     return f"CASE {column} {whens} ELSE 0 END"
 
 
 def card_values(conn) -> dict[str, int]:
     """유저별 카드 가치. 시장에 올려둔 카드도 아직 본인 자산으로 친다."""
-    case = _rarity_price_case("c.rarity")
+    case = _rarity_price_case(conn, "c.rarity")
     rows = conn.execute(
         f"""
         SELECT user_id, SUM(quantity * unit_price) AS total
@@ -99,7 +99,7 @@ def get_assets(conn, user_id: str) -> Assets:
         (user_id,),
     ).fetchone()
 
-    case = _rarity_price_case("c.rarity")
+    case = _rarity_price_case(conn, "c.rarity")
     card_row = conn.execute(
         f"""
         SELECT COALESCE(SUM(quantity * unit_price), 0) AS total
